@@ -2,6 +2,7 @@ package com.vizuri.fantasy_football_brms;
 
 import java.lang.Number;
 import com.vizuri.rules.domain.NFL;
+import com.vizuri.rules.domain.Team;
 
 rule "SampleRule"
 	dialect "mvel"
