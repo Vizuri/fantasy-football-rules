@@ -6,7 +6,7 @@
   <artifactId>Fantasy_Football_BRMS</artifactId>
   <version>1.0</version>
   <name>Fantasy_Football_BRMS</name>
-  <description>A fun yet powerful project showcasing BRMS 6 and BPMS 6 using fantasy football online application</description>
+  <description>A fun yet powerful project showcasing BRMS/BPMS v6.0 using the popular fantasy football online application</description>
   <dependencies>
     <dependency>
       <groupId>com.vizuri</groupId>
