@@ -1,9 +1,12 @@
 package com.vizuri.fantasy_football_brms;
 
 import java.lang.Number;
+import com.vizuri.rules.domain.NFL;
 
 rule "SampleRule"
 	dialect "mvel"
 	when
+		NFL( nflTeams == null )
 	then
+		System.out.println("No NFL Teams initialized");
 end
