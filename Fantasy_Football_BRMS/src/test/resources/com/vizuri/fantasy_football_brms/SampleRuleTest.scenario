@@ -5,13 +5,7 @@
   <fixtures>
     <fact-data>
       <type>NFL</type>
-      <fieldData>
-        <field-data>
-          <name>nflTeams</name>
-          <value>null</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
+      <fieldData/>
       <name>nfl</name>
       <isModify>false</isModify>
     </fact-data>
