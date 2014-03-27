@@ -7,8 +7,8 @@
       <type>Roster</type>
       <fieldData>
         <field-data>
-          <name>sizeValid</name>
-          <value>true</value>
+          <name>size</name>
+          <value>13</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -20,7 +20,7 @@
       <fieldValues>
         <expect-field>
           <fieldName>sizeValid</fieldName>
-          <expected>false</expected>
+          <expected>true</expected>
           <operator>==</operator>
           <nature>0</nature>
         </expect-field>
@@ -29,8 +29,10 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <rules/>
-  <inclusive>false</inclusive>
+  <rules>
+    <string>RosterRuleSize</string>
+  </rules>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
