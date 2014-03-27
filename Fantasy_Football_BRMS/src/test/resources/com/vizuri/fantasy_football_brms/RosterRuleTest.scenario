@@ -32,7 +32,7 @@
   <rules>
     <string>RosterRuleSize</string>
   </rules>
-  <inclusive>true</inclusive>
+  <inclusive>false</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
