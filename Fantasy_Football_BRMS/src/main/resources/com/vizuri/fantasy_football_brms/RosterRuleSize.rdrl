@@ -6,9 +6,8 @@ import com.vizuri.rules.domain.Roster;
 rule "RosterRuleSize"
 	dialect "mvel"
 	when
-		Roster( size > 15 , sizeValid == true )
+		roster : Roster( this != null , size > 15 , sizeValid == true )
 	then
-		Roster fact0 = new Roster();
-		fact0.setSizeValid( false );
-		insert( fact0 );
+		roster.setSizeValid( false );
+		update( roster );
 end
