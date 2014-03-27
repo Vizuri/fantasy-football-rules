@@ -9,6 +9,4 @@ rule "RosterRuleSize"
 		roster : Roster( size > 15 , sizeValid == true )
 	then
 		roster.setSizeValid( false );
-		roster.setSize( 0 );
-		update( roster );
 end
