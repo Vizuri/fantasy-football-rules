@@ -8,7 +8,12 @@
       <fieldData>
         <field-data>
           <name>size</name>
-          <value>13</value>
+          <value>5</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>sizeValid</name>
+          <value>true</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
