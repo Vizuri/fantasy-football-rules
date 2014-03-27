@@ -7,8 +7,8 @@
       <type>Roster</type>
       <fieldData>
         <field-data>
-          <name>size</name>
-          <value>14</value>
+          <name>sizeValid</name>
+          <value>true</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
