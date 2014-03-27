@@ -4,6 +4,7 @@ import java.lang.Number;
 import com.vizuri.rules.domain.Roster;
 
 rule "RosterRuleSize"
+	no-loop true
 	dialect "mvel"
 	when
 		roster : Roster( size > 15 , sizeValid == true )
