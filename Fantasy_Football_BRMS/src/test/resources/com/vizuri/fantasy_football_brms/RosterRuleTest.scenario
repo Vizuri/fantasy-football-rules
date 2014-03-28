@@ -27,7 +27,7 @@
           <fieldName>sizeValid</fieldName>
           <expected>false</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>roster</name>
@@ -38,10 +38,6 @@
   <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
-    <imports>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Roster</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-    </imports>
+    <imports/>
   </imports>
 </scenario>
