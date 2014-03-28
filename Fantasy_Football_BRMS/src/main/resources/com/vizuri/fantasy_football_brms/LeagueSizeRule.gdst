@@ -58,7 +58,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>fantasyTeamsCount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&lt;=</operator>
+          <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
@@ -73,7 +73,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>fantasyTeamsCount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&gt;=</operator>
+          <operator>&lt;=</operator>
           <parameters/>
         </condition-column52>
       </conditions>
@@ -221,12 +221,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
@@ -266,12 +266,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">9</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">9</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
