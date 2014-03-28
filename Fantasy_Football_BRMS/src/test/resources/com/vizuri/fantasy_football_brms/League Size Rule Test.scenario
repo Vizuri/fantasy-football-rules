@@ -1,0 +1,12 @@
+<scenario>
+  <name>League Size Rule Test</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures/>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>com.vizuri.fantasy_football_brms</packageName>
+  <imports>
+    <imports/>
+  </imports>
+</scenario>
