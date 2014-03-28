@@ -1,6 +1,5 @@
 package com.vizuri.fantasy_football_brms;
 
-import java.lang.Number;
 import com.vizuri.rules.domain.Roster;
 
 rule "RosterRuleSize"
