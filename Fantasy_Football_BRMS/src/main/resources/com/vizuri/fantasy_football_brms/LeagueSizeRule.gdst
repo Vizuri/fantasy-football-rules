@@ -193,7 +193,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Valid Fantasy Teams Size </valueString>
+        <valueString>Valid Fantasy Team Count </valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
