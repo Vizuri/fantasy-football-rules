@@ -1,7 +1,0 @@
-package com.vizuri.fantasy_football_brms;
-
-rule "LeagueSizeRule"
-	dialect "mvel"
-	when
-	then
-end
