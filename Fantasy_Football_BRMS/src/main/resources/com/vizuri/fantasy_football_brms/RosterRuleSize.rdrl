@@ -1,7 +1,5 @@
 package com.vizuri.fantasy_football_brms;
 
-import com.vizuri.rules.domain.League;
-
 rule "RosterRuleSize"
 	dialect "mvel"
 	when
