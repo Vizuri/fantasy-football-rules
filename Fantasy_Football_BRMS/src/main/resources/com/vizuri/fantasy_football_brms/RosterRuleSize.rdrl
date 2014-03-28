@@ -1,11 +1,12 @@
 package com.vizuri.fantasy_football_brms;
 
-import com.vizuri.rules.domain.Roster;
+import com.vizuri.rules.domain.League;
 
 rule "RosterRuleSize"
 	dialect "mvel"
 	when
-		roster : Roster( size > 15 , sizeValid == true )
+		league : League( nflTeamsSize > 8 , valid == true )
 	then
-		roster.setSizeValid( false );
+		league.setValid( false );
+		league.setComment( "Noo more than 8 fantasy teams are allowed in a league" );
 end
