@@ -5,5 +5,9 @@ import com.vizuri.rules.domain.Roster;
 rule "Roster Violation Rule"
 	dialect "mvel"
 	when
+		There is a roster
+		- The roster has a fantasy team with size greater than 15
+		- The roster has sizeValid that is true
 	then
+		Invalidate the roster
 end
