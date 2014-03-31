@@ -5,6 +5,9 @@ import java.lang.Number;
 rule "Manage League Rule"
 	dialect "mvel"
 	when
+		There is a roster
+		- When the roster has a fantasy team size greater than 15
+		- When the roster has sizeValid that is true
 	then
 		Invalidate the roster
 end
