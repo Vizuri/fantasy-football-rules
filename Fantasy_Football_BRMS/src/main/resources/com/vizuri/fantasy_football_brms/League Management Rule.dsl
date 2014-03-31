@@ -1,4 +1,5 @@
 [when] There is a roster =$roster:Roster()
+[when] There is another roster =$roster:Roster()
 
 [when]- When the roster has a fantasy team size greater than {sizeValue} = $roster.size >  {sizeValue} 
 
