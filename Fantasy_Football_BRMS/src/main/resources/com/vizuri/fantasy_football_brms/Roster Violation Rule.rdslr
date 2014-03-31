@@ -1,9 +1,13 @@
 package com.vizuri.fantasy_football_brms;
 
-import java.lang.Number;
+import com.vizuri.rules.domain.Roster;
 
 rule "Roster Violation Rule"
 	dialect "mvel"
 	when
+		There is a roster
+		- When the roster has sizeValid that is true
+		- When the roster has a fantasy team size greater than 15
 	then
+		Invalidate the roster
 end
