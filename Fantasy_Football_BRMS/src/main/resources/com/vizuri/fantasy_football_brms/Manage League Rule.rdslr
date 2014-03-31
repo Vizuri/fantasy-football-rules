@@ -6,4 +6,5 @@ rule "Manage League Rule"
 	dialect "mvel"
 	when
 	then
+		Invalidate the roster
 end
