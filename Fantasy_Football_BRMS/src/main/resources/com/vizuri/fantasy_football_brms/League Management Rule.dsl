@@ -8,4 +8,4 @@
 
 [when]- When the league has fantasyTeamsCount greater than {countValue} = $league.fantasyTeamsCount > {countValue} 
 [when]- When the league has valid that is {bool:BOOLEAN:checked} = $league.valid == {bool}
-[then] Invalidate the league  = modify ($league) { setValid(false), setComment('This league connot have more than 10 Fantasy Teams') }
+[then]- Invalidate the league  = modify ($league) { setValid(false) }
