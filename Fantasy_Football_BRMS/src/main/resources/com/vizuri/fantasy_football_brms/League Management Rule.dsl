@@ -1,4 +1,5 @@
-[when] When the roster has a fantasy team size greater than {sizeValue} = roster: Roster ( size > {sizeValue} )[then] Invalidate the roster  = roster.setSizeValid(false)
+[when] When the roster has a fantasy team size greater than {sizeValue} = roster: Roster ( size > {sizeValue} )
+[then] Invalidate the roster  = roster.setSizeValid(false)
 
 [when] When the roster has sizeValid that is {bool:BOOLEAN:checked} = roster: Roster(sizeValid == {bool})
 [then] Invalidate the roster  = roster.setSizeValid(false)
