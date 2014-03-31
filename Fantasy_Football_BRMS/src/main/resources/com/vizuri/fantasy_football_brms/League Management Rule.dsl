@@ -1,7 +1,7 @@
-[when] There is a roster with roster=$roster:Roster()
+[when] When there is a roster=$roster:Roster()
 
-[when]- roster has a fantasy team with size greater than {sizeValue}=$roster.size>{sizeValue} 
-[when]- roster has sizeValid that is {bool:BOOLEAN:checked}=$roster.sizeValid == {bool}
+[when]- When the roster has a fantasy team with size greater than {sizeValue}=$roster.size>{sizeValue} 
+[when]- When the roster has sizeValid that is {bool:BOOLEAN:checked}=$roster.sizeValid == {bool}
 [then] Invalidate the roster  = modify ($roster) { setSizeValid(false) }
 
 [when] There is a league = $league:League()
