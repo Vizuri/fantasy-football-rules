@@ -1,9 +1,13 @@
 package com.vizuri.fantasy_football_brms;
 
-import java.lang.Number;
+import com.vizuri.rules.domain.League;
 
 rule "League Violation Rule"
 	dialect "mvel"
 	when
+		There is a league
+		- When the league has valid that is true
+		- When the league has fantasyTeamsCount greater than 10
 	then
+		Invalidate the league
 end
