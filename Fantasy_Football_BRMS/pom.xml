@@ -7,6 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>Fantasy_Football_BRMS</name>
   <description>A fun yet powerful project showcasing BRMS 6 and BPMS 6 using fantasy football online application</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.vizuri</groupId>
+      <artifactId>ff-rules-domain</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
