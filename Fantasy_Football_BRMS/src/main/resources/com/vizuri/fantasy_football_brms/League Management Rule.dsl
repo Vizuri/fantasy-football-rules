@@ -1,4 +1,4 @@
-[when] There is a roster with=$roster:Roster()
+[when] There is a roster with roster=$roster:Roster()
 
 [when]- roster has a fantasy team with size greater than {sizeValue}=$roster.size>{sizeValue} 
 [when]- roster has sizeValid that is {bool:BOOLEAN:checked}=$roster.sizeValid == {bool}
