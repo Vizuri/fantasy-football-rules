@@ -23,7 +23,7 @@
         </field-data>
         <field-data>
           <name>fantasyTeamsCount</name>
-          <value>10</value>
+          <value>9</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -43,7 +43,7 @@
           <fieldName>comment</fieldName>
           <expected>No more than 8 fantasy teams are allowed in this league</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>league</name>
