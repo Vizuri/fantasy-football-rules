@@ -58,7 +58,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>fantasyTeamsCount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&gt;=</operator>
+          <operator>&lt;=</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
@@ -73,7 +73,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>fantasyTeamsCount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&lt;=</operator>
+          <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
       </conditions>
@@ -160,7 +160,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Valid League</valueString>
+        <valueString>League Within Bound</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -175,13 +175,13 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">2</valueNumeric>
+        <valueNumeric class="int">8</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">8</valueNumeric>
+        <valueNumeric class="int">2</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
@@ -206,7 +206,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Invalid League</valueString>
+        <valueString>League Lower Bound</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -221,12 +221,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
@@ -251,7 +251,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Invalid League</valueString>
+        <valueString>League Upper Bound</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -266,12 +266,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">9</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">9</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
