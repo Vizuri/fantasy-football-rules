@@ -1,0 +1,9 @@
+package com.vizuri.fantasy_football_brms;
+
+import java.lang.Number;
+
+rule "Fantasy League Eligibility"
+	dialect "mvel"
+	when
+	then
+end
