@@ -8,6 +8,13 @@
   <packaging>kjar</packaging>
   <name>Fantasy_Football_BRMS</name>
   <description>A fun yet powerful project showcasing BRMS/BPMS v6.0 using the popular fantasy football online application</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.vizuri</groupId>
+      <artifactId>ff-rules-domian</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
