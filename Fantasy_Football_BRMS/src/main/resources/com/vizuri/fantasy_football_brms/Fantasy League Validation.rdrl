@@ -10,4 +10,6 @@ rule "Fantasy League Validation"
 	when
 		$fl : FantasyLeague( eval( fantasyTeamList.size() > 8 && fantasyTeamList.size() < 2 ))
 	then
+		Violation $violation = new Violation();
+		$fl.getViolationList().add($violation);
 end
