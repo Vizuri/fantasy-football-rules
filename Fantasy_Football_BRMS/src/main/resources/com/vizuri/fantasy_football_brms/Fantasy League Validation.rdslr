@@ -10,6 +10,5 @@ rule "Fantasy League Validation"
 		There is a Fantasy League
 		- There is a size of Fantasy Teams greater than or equal to 2
 		- There is a size of Fantasy Teams less than or equal to 8
-		end
 	then
 end
