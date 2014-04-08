@@ -2,6 +2,7 @@ package com.vizuri.fantasy_football_brms;
 
 import com.vizuri.rules.domain.FantasyLeague;
 import com.vizuri.rules.domain.FantasyTeam;
+import com.vizuri.rules.domain.Violation;
 
 rule "Fantasy League Validation"
 	dialect "mvel"
