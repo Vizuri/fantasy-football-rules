@@ -8,7 +8,6 @@ import com.vizuri.rules.domain.FantasyTeam;
 rule "Fantasy League Validation"
 	dialect "mvel"
 	when
-		$fl : FantasyLeague( )
-		FantasyTeam(size > 8, size < 2) from $fl.fantasyTeamList
+		$fl : FantasyLeague( eval( fantasyTeamList.size() > 8 ))
 	then
 end
