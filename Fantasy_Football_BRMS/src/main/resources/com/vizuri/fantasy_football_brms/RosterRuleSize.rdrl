@@ -5,7 +5,7 @@ import com.vizuri.rules.domain.Roster;
 rule "RosterRuleSize"
 	dialect "mvel"
 	when
-		roster : Roster( sizeValid == true )
+		roster : Roster( sizeValid == true , size > 14 )
 	then
 		roster.setSizeValid( false );
 		System.out.println("The Roster size is more than 15");
