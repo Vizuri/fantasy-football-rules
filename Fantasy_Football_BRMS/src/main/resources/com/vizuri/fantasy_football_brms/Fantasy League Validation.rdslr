@@ -10,7 +10,7 @@ rule "Fantasy League Validation"
 	dialect "mvel"
 	when
 		There is League
-		There are teams with size less than 10 or greater than 1
+		There are teams with size less than 1 or greater than 2
 	then
 		>Violation fact0 = new Violation();
 		>fact0.setSeverity( Severity.ERROR );
