@@ -13,7 +13,7 @@ rule "League Size Validator"
 		The total count of fantasy teams in this league is less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
-		>fact0.setDetails( "Invalid League Size" );
+		>fact0.setDetails( "Invalid Fantasy Team Size" );
 		>fact0.setSeverity( Severity.ERROR );
 		>insert( fact0 );
 end
