@@ -28,21 +28,11 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
-    <expect-fact>
-      <fieldValues>
-        <expect-field>
-          <fieldName>severity</fieldName>
-          <expected>Severity.ERROR</expected>
-          <operator>==</operator>
-          <nature>4</nature>
-        </expect-field>
-      </fieldValues>
-      <name>Violation</name>
-      <anonymous>true</anonymous>
-    </expect-fact>
   </fixtures>
-  <rules/>
-  <inclusive>false</inclusive>
+  <rules>
+    <string>Fantasy League Validation</string>
+  </rules>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
