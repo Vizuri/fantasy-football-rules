@@ -36,6 +36,12 @@
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
+        <expect-field>
+          <fieldName>severity</fieldName>
+          <expected>Severity.ERROR</expected>
+          <operator>==</operator>
+          <nature>4</nature>
+        </expect-field>
       </fieldValues>
       <name>Violation</name>
       <anonymous>true</anonymous>
