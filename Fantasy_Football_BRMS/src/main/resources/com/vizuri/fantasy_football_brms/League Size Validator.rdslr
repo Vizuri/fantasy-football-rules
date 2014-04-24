@@ -4,6 +4,7 @@ import com.vizuri.rules.domain.Violation;
 import java.util.ArrayList;
 import com.vizuri.rules.domain.FantasyTeam;
 import com.vizuri.rules.domain.League;
+import com.vizuri.rules.domain.Severity;
 
 rule "League Size Validator"
 	dialect "mvel"
@@ -12,6 +13,7 @@ rule "League Size Validator"
 		There are teams with size less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
-		>fact0.setSeverity(  );
+		>fact0.setSeverity( Severity.ERROR );
+		>fact0.setDetails( "Invalid Fantasy League Size" );
 		>insert( fact0 );
 end
