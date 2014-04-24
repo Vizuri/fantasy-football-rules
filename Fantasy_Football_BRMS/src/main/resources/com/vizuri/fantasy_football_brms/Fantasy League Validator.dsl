@@ -4,4 +4,4 @@
 			FantasyTeam()
 			from $fl.getFantasyTeamList()
 		)
-[when] There are Fantasy Teams in the league with size less than {less} or greater than {greater} = $flTeams.size() > {greater} || $flTeams.size() < {less}
+#[when] There are Fantasy Teams in the league with size less than {less} or greater than {greater} = $flTeams.size() < {less} || $flTeams.size() > {greaterValue}
