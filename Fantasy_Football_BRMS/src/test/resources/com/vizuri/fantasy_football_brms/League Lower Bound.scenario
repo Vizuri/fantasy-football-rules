@@ -1,5 +1,5 @@
 <scenario>
-  <name>League Validation.scenario</name>
+  <name>League Lower Bound.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
@@ -32,13 +32,19 @@
       <fieldValues>
         <expect-field>
           <fieldName>details</fieldName>
-          <expected>Invalid League Size</expected>
+          <expected>Invalid Fantasy Team Size</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
         <expect-field>
           <fieldName>severityString</fieldName>
           <expected>ERROR</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>title</fieldName>
+          <expected>Invalid League</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
