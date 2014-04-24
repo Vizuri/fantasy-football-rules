@@ -3,6 +3,8 @@ package com.vizuri.fantasy_football_brms;
 import com.vizuri.rules.domain.FantasyLeague;
 import com.vizuri.rules.domain.Violation;
 import com.vizuri.rules.domain.Severity;
+import java.util.ArrayList;
+import com.vizuri.rules.domain.FantasyTeam;
 
 rule "Fantasy League Validation"
 	dialect "mvel"
