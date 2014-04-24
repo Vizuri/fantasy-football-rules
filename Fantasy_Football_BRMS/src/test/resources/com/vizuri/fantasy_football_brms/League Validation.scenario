@@ -48,7 +48,7 @@
     </expect-fact>
   </fixtures>
   <rules/>
-  <inclusive>false</inclusive>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
