@@ -27,6 +27,18 @@
       <name>$team1</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>FantasyTeam</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>8</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team2</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
@@ -34,7 +46,7 @@
           <fieldName>details</fieldName>
           <expected>Invalid Fantasy League Size</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>Violation</name>
