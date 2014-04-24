@@ -14,6 +14,5 @@ rule "League Size Validator"
 	then
 		>Violation fact0 = new Violation();
 		>fact0.setSeverity( Severity.ERROR );
-		>fact0.setDetails( "Invalid Fantasy League Size" );
 		>insert( fact0 );
 end
