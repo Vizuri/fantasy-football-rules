@@ -50,7 +50,7 @@
         </expect-field>
         <expect-field>
           <fieldName>severity</fieldName>
-          <expected>Severity.ERROR</expected>
+          <expected>Severity.INFO</expected>
           <operator>==</operator>
           <nature>4</nature>
         </expect-field>
@@ -72,9 +72,6 @@
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Violation</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Severity</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>java.util.ArrayList</type>
