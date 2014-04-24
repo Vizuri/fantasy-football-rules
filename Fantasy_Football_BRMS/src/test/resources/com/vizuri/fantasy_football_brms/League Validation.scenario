@@ -28,6 +28,24 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>details</fieldName>
+          <expected>Invalid League Size</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>severity</fieldName>
+          <expected>Severity.ERROR</expected>
+          <operator>==</operator>
+          <nature>4</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Violation</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>true</inclusive>
