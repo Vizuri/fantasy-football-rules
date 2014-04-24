@@ -1,7 +1,6 @@
 package com.vizuri.fantasy_football_brms;
 
 import com.vizuri.rules.domain.Violation;
-import com.vizuri.rules.domain.Severity;
 import java.util.ArrayList;
 import com.vizuri.rules.domain.FantasyTeam;
 import com.vizuri.rules.domain.League;
@@ -13,5 +12,6 @@ rule "League Size Validator"
 		There are teams with size less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
+		>fact0.setSeverity(  );
 		>insert( fact0 );
 end
