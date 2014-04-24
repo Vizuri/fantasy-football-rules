@@ -1,2 +1,2 @@
 'Violation.details' : ["Invalid Fantasy League Size"]
-'Violation.sevority' : ["INFO","WARNING","ERROR","FATAL"]
+'Violation.sevority' : ["HELLO","INFO","WARNING","ERROR","FATAL"]
