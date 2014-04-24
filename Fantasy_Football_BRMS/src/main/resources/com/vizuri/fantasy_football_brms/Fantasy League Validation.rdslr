@@ -10,6 +10,9 @@ rule "Fantasy League Validation"
 	dialect "mvel"
 	when
 		There is a Fantasy League
-		There are Fantasy Teams
 	then
+		>Violation fact0 = new Violation();
+		>fact0.setSeverity( Severity.ERROR );
+		>fact0.setDetails( "Invalid Fantasy League Size" );
+		>insert( fact0 );
 end
