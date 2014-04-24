@@ -1,3 +1,7 @@
-[when] There is a Fantasy League=$fl:FantasyLeague()
-[when]- There is a size of Fantasy Teams greater than or equal to {value}=$fl.fantasyTeamList.size() >= {value}
-[when]- There is a size of Fantasy Teams less than or equal to {value}=$fl.fantasyTeamList.size() <= {value}
+[when] There is a Fantasy League = $fl:FantasyLeague()
+[when] There are Fantasy Teams in the league with size greater than {value} = $flTeams: ArrayList( size > {value} )
+	from collect (
+			FantasyTeam()
+			from $fl.getFantasyTeamList()
+		)
+[when] There are Fantasy Teams in the league with size less than {value} = $flTeams.size() <= {value}
