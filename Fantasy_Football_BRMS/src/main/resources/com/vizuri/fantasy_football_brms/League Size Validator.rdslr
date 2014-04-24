@@ -13,7 +13,5 @@ rule "League Size Validator"
 		There are teams with size less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
-		>fact0.setDetails( "Invalid Fantasy League Size" );
-		>fact0.setSeverity( Severity.ERROR );
 		>insert( fact0 );
 end
