@@ -48,14 +48,18 @@
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
+        <expect-field>
+          <fieldName>severity</fieldName>
+          <expected>Severity.ERROR</expected>
+          <operator>==</operator>
+          <nature>4</nature>
+        </expect-field>
       </fieldValues>
       <name>Violation</name>
       <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
-  <rules>
-    <string>Fantasy League Validation</string>
-  </rules>
+  <rules/>
   <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
