@@ -28,6 +28,11 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues/>
+      <name>ArrayList</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules>
     <string>Fantasy League Validation</string>
