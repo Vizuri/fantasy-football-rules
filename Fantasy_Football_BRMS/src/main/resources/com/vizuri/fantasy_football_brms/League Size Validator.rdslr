@@ -4,7 +4,6 @@ import com.vizuri.rules.domain.Violation;
 import java.util.ArrayList;
 import com.vizuri.rules.domain.FantasyTeam;
 import com.vizuri.rules.domain.League;
-import com.vizuri.rules.domain.Severity;
 
 rule "League Size Validator"
 	dialect "mvel"
