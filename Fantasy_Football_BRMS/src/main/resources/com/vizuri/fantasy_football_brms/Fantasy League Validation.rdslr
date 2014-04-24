@@ -7,5 +7,7 @@ import com.vizuri.rules.domain.Severity;
 rule "Fantasy League Validation"
 	dialect "mvel"
 	when
+		There is a Fantasy League
+		There are Fantasy Teams
 	then
 end
