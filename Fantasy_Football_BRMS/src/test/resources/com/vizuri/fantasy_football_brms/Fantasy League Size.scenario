@@ -29,8 +29,15 @@
     </fact-data>
     <execution-trace/>
     <expect-fact>
-      <fieldValues/>
-      <name>ArrayList</name>
+      <fieldValues>
+        <expect-field>
+          <fieldName>details</fieldName>
+          <expected>Invalid Fantasy League Size</expected>
+          <operator>==</operator>
+          <nature>0</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Violation</name>
       <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
