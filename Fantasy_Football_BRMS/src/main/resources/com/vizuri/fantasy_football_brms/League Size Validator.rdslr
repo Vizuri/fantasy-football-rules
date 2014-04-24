@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import com.vizuri.rules.domain.FantasyTeam;
 import com.vizuri.rules.domain.League;
 
-rule "Fantasy League Validation"
+rule "League Size Validator"
 	dialect "mvel"
 	when
 		There is League
