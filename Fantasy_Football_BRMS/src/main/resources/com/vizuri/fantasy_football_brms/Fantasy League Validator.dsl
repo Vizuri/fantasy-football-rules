@@ -1,5 +1,5 @@
 [when] There is a Fantasy League = $fl:FantasyLeague()
-[when] There are Fantasy Teams = $flTeams: ArrayList( )
+[when] There are Fantasy Teams = $flTeams: ArrayList(size >10 || size <3 )
 	from collect (
 			FantasyTeam()
 			from $fl.getFantasyTeamList()
