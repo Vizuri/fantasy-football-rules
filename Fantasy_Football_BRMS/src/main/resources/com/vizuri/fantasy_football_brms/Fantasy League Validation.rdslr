@@ -1,16 +1,16 @@
 package com.vizuri.fantasy_football_brms;
 
-import com.vizuri.rules.domain.FantasyLeague;
 import com.vizuri.rules.domain.Violation;
 import com.vizuri.rules.domain.Severity;
 import java.util.ArrayList;
 import com.vizuri.rules.domain.FantasyTeam;
+import com.vizuri.rules.domain.League;
 
 rule "Fantasy League Validation"
 	dialect "mvel"
 	when
-		There is a Fantasy League
-		There are Fantasy Teams with size less than 2 or greater than 10
+		There is League
+		There are teams with size less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
 		>fact0.setSeverity( Severity.ERROR );
