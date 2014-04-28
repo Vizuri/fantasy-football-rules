@@ -162,12 +162,6 @@
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
-        <expect-field>
-          <fieldName>title</fieldName>
-          <expected>Invalid League</expected>
-          <operator>==</operator>
-          <nature>1</nature>
-        </expect-field>
       </fieldValues>
       <name>Violation</name>
       <anonymous>true</anonymous>
