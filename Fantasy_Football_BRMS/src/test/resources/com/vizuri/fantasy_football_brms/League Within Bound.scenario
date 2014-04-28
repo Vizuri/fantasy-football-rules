@@ -4,11 +4,11 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>League</type>
+      <type>FantasyLeague</type>
       <fieldData>
         <field-data>
-          <name>leagueId</name>
-          <value>100</value>
+          <name>id</name>
+          <value>101</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -20,7 +20,7 @@
       <fieldData>
         <field-data>
           <name>leagueId</name>
-          <value>100</value>
+          <value>101</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -32,7 +32,7 @@
       <fieldData>
         <field-data>
           <name>leagueId</name>
-          <value>100</value>
+          <value>101</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -47,13 +47,13 @@
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.League</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.FantasyTeam</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Violation</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.FantasyLeague</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
