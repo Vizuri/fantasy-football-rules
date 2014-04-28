@@ -15,6 +15,6 @@ rule "League Size Validator"
 		>Violation fact0 = new Violation();
 		>fact0.setDetails( "Invalid Fantasy Team Size" );
 		>fact0.setSeverity( Severity.ERROR );
-		>fact0.setTitle( "Invalid League" );
+		>fact0.setTitle( "Invalid Fantasy League" );
 		>insert( fact0 );
 end
