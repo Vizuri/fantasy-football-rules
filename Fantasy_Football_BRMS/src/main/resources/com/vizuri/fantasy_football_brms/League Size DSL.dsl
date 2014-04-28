@@ -1,5 +1,5 @@
-[when] There is a League = $league:League()
+[when] There is a Fantasy League = $league:FantasyLeague()
 [when] The total count of fantasy teams in this league is less than {lessValue} or greater than {greaterValue} = ArrayList(size >{greaterValue} || size < {lessValue})
 from collect (
-   FantasyTeam(leagueId == $league.leagueId)
+   FantasyTeam(leagueId == $league.id)
 )
