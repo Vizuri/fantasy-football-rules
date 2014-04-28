@@ -4,6 +4,18 @@
   <globals/>
   <fixtures>
     <fact-data>
+      <type>FantasyLeague</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>100</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$league</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
       <type>FantasyTeam</type>
       <fieldData>
         <field-data>
@@ -12,7 +24,7 @@
           <nature>1</nature>
         </field-data>
       </fieldData>
-      <name>$teamA</name>
+      <name>$team1</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
@@ -51,6 +63,9 @@
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Violation</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.FantasyLeague</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
