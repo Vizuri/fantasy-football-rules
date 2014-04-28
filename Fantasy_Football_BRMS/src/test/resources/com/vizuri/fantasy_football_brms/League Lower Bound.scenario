@@ -4,18 +4,6 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>League</type>
-      <fieldData>
-        <field-data>
-          <name>leagueId</name>
-          <value>100</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$league</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
       <type>FantasyTeam</type>
       <fieldData>
         <field-data>
@@ -58,9 +46,6 @@
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.League</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.FantasyTeam</type>
       </org.drools.workbench.models.datamodel.imports.Import>
