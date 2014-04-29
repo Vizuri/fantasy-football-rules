@@ -39,12 +39,19 @@
       <name>$team2</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>FantasyTeam</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>101</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team3</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
-    <expect-fact>
-      <fieldValues/>
-      <name>Violation</name>
-      <anonymous>true</anonymous>
-    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
