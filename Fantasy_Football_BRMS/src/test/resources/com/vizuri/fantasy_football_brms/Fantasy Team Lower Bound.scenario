@@ -19,7 +19,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -31,7 +31,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -48,13 +48,25 @@
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
+        <expect-field>
+          <fieldName>severityString</fieldName>
+          <expected>ERROR</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>details</fieldName>
+          <expected>Invalid Roster Size</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
       </fieldValues>
       <name>Violation</name>
       <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
   <rules/>
-  <inclusive>false</inclusive>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
