@@ -80,7 +80,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1001</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -92,7 +92,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1001</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -104,43 +104,19 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1001</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
       <name>$player8</name>
       <isModify>false</isModify>
     </fact-data>
-    <fact-data>
-      <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>id</name>
-          <value>1000</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$player9</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
-      <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>id</name>
-          <value>1000</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$player10</name>
-      <isModify>false</isModify>
-    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>title</fieldName>
-          <expected>Invalid Fantasy Team</expected>
+          <fieldName>severityString</fieldName>
+          <expected>ERROR</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
