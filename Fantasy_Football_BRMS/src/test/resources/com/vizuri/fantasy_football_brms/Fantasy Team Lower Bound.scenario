@@ -8,7 +8,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>2000</value>
+          <value>1000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -20,7 +20,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>2000</value>
+          <value>1000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -32,7 +32,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>2000</value>
+          <value>1000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -45,18 +45,6 @@
         <expect-field>
           <fieldName>title</fieldName>
           <expected>Invalid Fantasy Team</expected>
-          <operator>==</operator>
-          <nature>1</nature>
-        </expect-field>
-        <expect-field>
-          <fieldName>severityString</fieldName>
-          <expected>ERROR</expected>
-          <operator>==</operator>
-          <nature>1</nature>
-        </expect-field>
-        <expect-field>
-          <fieldName>details</fieldName>
-          <expected>Invalid Roster Size</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
