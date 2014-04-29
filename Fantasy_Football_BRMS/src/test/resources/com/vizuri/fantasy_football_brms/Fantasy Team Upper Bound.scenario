@@ -195,6 +195,18 @@
       <name>$player15</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>1000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$player16</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
