@@ -77,10 +77,10 @@
         <type>com.vizuri.rules.domain.Player</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Violation</type>
+        <type>com.vizuri.rules.domain.Severity</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Severity</type>
+        <type>com.vizuri.rules.domain.Violation</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
