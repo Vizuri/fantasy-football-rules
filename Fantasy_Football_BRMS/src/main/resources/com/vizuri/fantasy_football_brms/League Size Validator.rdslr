@@ -10,7 +10,6 @@ rule "League Size Validator"
 	dialect "mvel"
 	when
 		There is a Fantasy League
-		>not (Violation( )) 
 		The total count of fantasy teams in this league is less than 2 or greater than 10
 	then
 		>Violation fact0 = new Violation();
