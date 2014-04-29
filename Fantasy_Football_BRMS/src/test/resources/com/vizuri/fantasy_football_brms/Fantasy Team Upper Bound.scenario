@@ -32,7 +32,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -44,7 +44,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -56,7 +56,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -68,7 +68,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -80,7 +80,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -92,7 +92,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -104,7 +104,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -116,7 +116,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -128,7 +128,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -152,7 +152,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -164,7 +164,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -176,7 +176,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -188,7 +188,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -200,11 +200,23 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>1</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
       <name>$player16</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$player17</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
@@ -233,10 +245,10 @@
         <type>com.vizuri.rules.domain.Player</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Violation</type>
+        <type>com.vizuri.rules.domain.Severity</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Severity</type>
+        <type>com.vizuri.rules.domain.Violation</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
