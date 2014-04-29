@@ -8,7 +8,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>2000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -20,7 +20,7 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>2000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -32,11 +32,47 @@
       <fieldData>
         <field-data>
           <name>id</name>
-          <value>1000</value>
+          <value>2000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
       <name>$player2</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>2000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$p3</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>2000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$p4</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>id</name>
+          <value>2000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$p5</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
