@@ -19,7 +19,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -31,7 +31,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -43,7 +43,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -55,7 +55,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -67,7 +67,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -79,7 +79,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -91,7 +91,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -103,7 +103,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -115,7 +115,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -127,7 +127,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -139,7 +139,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -151,7 +151,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -163,7 +163,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -175,7 +175,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -187,7 +187,7 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
@@ -199,24 +199,12 @@
       <type>Player</type>
       <fieldData>
         <field-data>
-          <name>id</name>
+          <name>fantasyTeamId</name>
           <value>1000</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
       <name>$player16</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
-      <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>id</name>
-          <value>1000</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$player17</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
@@ -225,6 +213,18 @@
         <expect-field>
           <fieldName>severityString</fieldName>
           <expected>ERROR</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>title</fieldName>
+          <expected>Invalid Fantasy Team</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>details</fieldName>
+          <expected>Invalid Roster Size</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
