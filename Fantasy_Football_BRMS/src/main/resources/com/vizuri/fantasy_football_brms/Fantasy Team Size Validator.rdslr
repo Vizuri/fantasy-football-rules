@@ -11,6 +11,7 @@ rule "Fantasy Team Size Validator"
 	when
 		There is a Fantasy Team
 		The total count of players in this team is less than 5 or greater than 15
+		>not (Violation( )) 
 	then
 		>Violation fact0 = new Violation();
 		>fact0.setTitle( "Invalid Fantasy Team" );
