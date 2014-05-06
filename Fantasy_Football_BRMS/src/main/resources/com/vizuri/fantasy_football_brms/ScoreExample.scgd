@@ -1,0 +1,14 @@
+<org.drools.workbench.models.guided.scorecard.shared.ScoreCardModel>
+  <name>ScoreExample</name>
+  <baselineScore>0.0</baselineScore>
+  <initialScore>0.0</initialScore>
+  <useReasonCodes>false</useReasonCodes>
+  <factName></factName>
+  <fieldName></fieldName>
+  <reasonCodeField></reasonCodeField>
+  <characteristics/>
+  <packageName>com.vizuri.fantasy_football_brms</packageName>
+  <imports>
+    <imports/>
+  </imports>
+</org.drools.workbench.models.guided.scorecard.shared.ScoreCardModel>
