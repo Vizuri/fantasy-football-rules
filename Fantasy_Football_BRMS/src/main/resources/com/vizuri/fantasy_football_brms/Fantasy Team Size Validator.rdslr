@@ -11,9 +11,9 @@ rule "Fantasy Team Size Validator"
 	when
 		There is a Fantasy Team
 		The total count of players in this team is less than 5 or greater than 15
-		>$team : FantasyTeam( $name : name != null )
+		>$team1 : FantasyTeam( id == ( $team.id ) , $teamName : name != null )
 	then
 		>Violation $viola = new Violation();
-		>$viola.setTitle( $name );
+		>$viola.setTitle( $teamName );
 		>insert( $viola );
 end
