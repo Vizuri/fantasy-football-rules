@@ -12,8 +12,7 @@ rule "Fantasy Team Size Validator"
 		There is a Fantasy Team
 		The total count of players in this team is less than 5 or greater than 15
 	then
-		>Violation fact0 = new Violation();
-		>fact0.setSeverity( Severity.ERROR );
-		>insert( fact0 );
-		>fact0.setTitle($team.getName());
+		>Violation $viola = new Violation();
+		>$viola.setTitle( $team.getName() );
+		>insert( $viola );
 end
