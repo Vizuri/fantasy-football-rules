@@ -11,6 +11,11 @@
           <value>1000</value>
           <nature>1</nature>
         </field-data>
+        <field-data>
+          <name>name</name>
+          <value>TeamZ</value>
+          <nature>1</nature>
+        </field-data>
       </fieldData>
       <name>$team</name>
       <isModify>false</isModify>
