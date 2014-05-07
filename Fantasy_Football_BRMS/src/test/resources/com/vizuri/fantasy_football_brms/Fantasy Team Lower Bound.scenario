@@ -7,6 +7,11 @@
       <type>FantasyTeam</type>
       <fieldData>
         <field-data>
+          <name>name</name>
+          <value>teamB</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
           <name>id</name>
           <value>1000</value>
           <nature>1</nature>
@@ -27,30 +32,18 @@
       <name>$player1</name>
       <isModify>false</isModify>
     </fact-data>
-    <fact-data>
-      <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>fantasyTeamId</name>
-          <value>1000</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$player2</name>
-      <isModify>false</isModify>
-    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>title</fieldName>
-          <expected>Invalid Fantasy Team</expected>
+          <fieldName>severityString</fieldName>
+          <expected>ERROR</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
         <expect-field>
-          <fieldName>severityString</fieldName>
-          <expected>ERROR</expected>
+          <fieldName>title</fieldName>
+          <expected>teamA</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
