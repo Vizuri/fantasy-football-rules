@@ -13,7 +13,7 @@ rule "Fantasy Team Size Validator"
 		The total count of players in this team is less than 5 or greater than 15
 	then
 		>Violation $vio = new Violation();
-		>$vio.setDetails( "Invalid Fantasy Team Size" );
+		>$vio.setDetails( "Invalid Roster Size" );
 		>$vio.setSeverity( Severity.ERROR );
 		>$vio.setTitle( $team.getName() );
 		>insert( $vio );
