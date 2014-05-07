@@ -15,6 +15,6 @@ rule "Fantasy Team Size Validator"
 		>Violation $vio = new Violation();
 		>$vio.setDetails( "Invalid Fantasy Team Size" );
 		>$vio.setSeverity( Severity.ERROR );
-		>$vio.setTitle( team.getName() );
+		>$vio.setTitle( eam.getName( );
 		>insert( $vio );
 end
