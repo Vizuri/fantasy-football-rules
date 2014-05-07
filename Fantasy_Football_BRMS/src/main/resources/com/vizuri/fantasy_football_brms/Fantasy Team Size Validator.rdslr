@@ -16,4 +16,5 @@ rule "Fantasy Team Size Validator"
 		>$vio.setDetails( "Invalid Roster Size" );
 		>$vio.setSeverity( Severity.ERROR );
 		>insert( $vio );
+		>$vio.setTitle( $team.getName() );
 end
