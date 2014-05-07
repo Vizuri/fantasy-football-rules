@@ -9,7 +9,7 @@ import java.util.ArrayList;
 rule "Fantasy Team Size Validator"
 	dialect "mvel"
 	when
-		There is a Fantasy Team with a title called "teamA"
+		There is a Fantasy Team with a title called ""
 		The total count of players in this team is less than 5 or greater than 15
 	then
 		>Violation fact0 = new Violation();
