@@ -10,7 +10,7 @@ rule "Fantasy Team Size Validator"
 	dialect "mvel"
 	when
 		There is a Fantasy Team
-		The second check total count of players in this team is less than 5 or greater than 15
+		The total count of players in this team is less than 5 or greater than 15
 	then
 		>Violation $vio = new Violation();
 		>$vio.setDetails( "Invalid Roster Size" );
