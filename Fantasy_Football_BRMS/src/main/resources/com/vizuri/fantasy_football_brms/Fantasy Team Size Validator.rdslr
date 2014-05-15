@@ -15,6 +15,7 @@ rule "Fantasy Team Size Validator"
 		>Violation fact0 = new Violation();
 		>fact0.setDetails( "Invalid Roster Size" );
 		>fact0.setSeverity( Severity.ERROR );
-		>fact0.setTitle( $team.getName() );
 		>insert( fact0 );
+		>fact0.setTitle($team.getName());
+		>$team.getViolationList().add(fact0);
 end
