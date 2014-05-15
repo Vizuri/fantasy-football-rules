@@ -11,6 +11,11 @@
           <value>100</value>
           <nature>1</nature>
         </field-data>
+        <field-data>
+          <name>name</name>
+          <value>leagueA</value>
+          <nature>1</nature>
+        </field-data>
       </fieldData>
       <name>$league</name>
       <isModify>false</isModify>
