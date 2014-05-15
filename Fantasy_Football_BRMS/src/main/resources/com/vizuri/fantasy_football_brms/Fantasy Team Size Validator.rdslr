@@ -1,9 +1,21 @@
 package com.vizuri.fantasy_football_brms;
 
-import java.lang.Number;
+import java.util.ArrayList;
+import com.vizuri.rules.domain.FantasyTeam;
+import com.vizuri.rules.domain.Player;
+import com.vizuri.rules.domain.Severity;
+import com.vizuri.rules.domain.Violation;
 
 rule "Fantasy Team Size Validator"
 	dialect "mvel"
 	when
+		There is a Fantasy Team
+		The total count of players in this team is less than 5 or greater than 15
 	then
+		>Violation $vio = new Violation();
+		>$vio.setDetails( "Invalid Roster Size" );
+		>$vio.setSeverity( Severity.ERROR );
+		>$vio.setTitle( $team.getName() );
+		>$team.getViolationList().add($vio);
+		>insert( $vio );
 end
