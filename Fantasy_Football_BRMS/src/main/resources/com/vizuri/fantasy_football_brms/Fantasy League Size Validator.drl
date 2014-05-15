@@ -10,7 +10,7 @@ import com.vizuri.rules.domain.FantasyLeague;
 	    dialect "mvel"
 	    when
 	        $league:FantasyLeague()
-	        ArrayList( size > 0 && (size < 5 || size > 10) ) from collect ( FantasyTeam(leagueId == $league.id) )
+	        ArrayList( size > 0 && (size < 2 || size > 10) ) from collect ( FantasyTeam(leagueId == $league.id) )
 	    then
 	         Violation $vio = new Violation();
 	         $vio.setDetails( "Invalid Fantasy Team Size" );
