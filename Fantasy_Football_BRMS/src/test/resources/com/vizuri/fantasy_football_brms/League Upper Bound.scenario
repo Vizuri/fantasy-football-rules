@@ -169,7 +169,7 @@
         </expect-field>
         <expect-field>
           <fieldName>title</fieldName>
-          <expected>Invalid Fantasy League</expected>
+          <expected>leagueB</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
