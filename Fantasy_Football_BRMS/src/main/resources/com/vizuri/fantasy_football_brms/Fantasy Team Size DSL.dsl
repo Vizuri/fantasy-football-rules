@@ -3,7 +3,5 @@
 from collect (
    Player(fantasyTeamId == $team.id)
 )
-[when] The second check total count of players in this team is less than {lessValue} or greater than {greaterValue} =  ArrayList( size  > 0 && ( size < {lessValue} || size > {greaterValue} ) ) from collect (
-   Player(fantasyTeamId == $team.id)
-   from $team.getPlayers()
-)
+[then] There is a Violation = $vio:Violation()
+
