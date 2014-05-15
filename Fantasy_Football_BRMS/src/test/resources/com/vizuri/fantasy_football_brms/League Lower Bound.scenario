@@ -27,18 +27,6 @@
       <name>$team1</name>
       <isModify>false</isModify>
     </fact-data>
-    <fact-data>
-      <type>FantasyTeam</type>
-      <fieldData>
-        <field-data>
-          <name>leagueId</name>
-          <value>100</value>
-          <nature>1</nature>
-        </field-data>
-      </fieldData>
-      <name>$team2</name>
-      <isModify>false</isModify>
-    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
