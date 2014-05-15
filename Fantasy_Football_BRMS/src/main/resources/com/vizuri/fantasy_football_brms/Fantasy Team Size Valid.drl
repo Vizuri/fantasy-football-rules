@@ -9,7 +9,7 @@ rule "Fantasy Team Size Valid"
 	dialect "mvel"
 	when
 	 	$team:FantasyTeam();
-		ArrayList( size > 0 && (size < 5 || size > 15) ) from collect ( Player(fantasyTeamId == $team.id) )
+		ArrayList( size > 0 && (size < 2 || size > 15) ) from collect ( Player(fantasyTeamId == $team.id) )
 	then
 		Violation $vio = new Violation();
 		$vio.setDetails( "Invalid Roster Size" );
