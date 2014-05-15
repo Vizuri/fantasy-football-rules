@@ -15,7 +15,7 @@ import com.vizuri.rules.domain.FantasyLeague;
 	         Violation $vio = new Violation();
 	         $vio.setDetails( "Invalid Fantasy Team Size" );
 	         $vio.setSeverity( Severity.ERROR );
-	         $vio.setTitle( "Invalid Fantasy League" );
+	         $vio.setTitle( $league.getName() );
 	         $league.getViolationList().add($vio);
 	         insert($vio);
 	end
