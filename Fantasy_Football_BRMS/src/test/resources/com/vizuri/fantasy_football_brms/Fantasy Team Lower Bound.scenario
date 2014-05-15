@@ -32,6 +32,18 @@
       <name>$player1</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>Player</type>
+      <fieldData>
+        <field-data>
+          <name>fantasyTeamId</name>
+          <value>1000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$player2</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
