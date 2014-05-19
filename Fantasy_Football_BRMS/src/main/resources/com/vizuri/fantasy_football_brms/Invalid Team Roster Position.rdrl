@@ -2,7 +2,7 @@ package com.vizuri.fantasy_football_brms;
 
 import java.lang.Number;
 
-rule "Team Roster Position"
+rule "Invalid Team Roster Position"
 	dialect "mvel"
 	when
 	then
