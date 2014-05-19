@@ -9,6 +9,6 @@ import com.vizuri.rules.domain.TeamRosterPosition;
 rule "Invalid Team Roster Position"
 	dialect "mvel"
 	when
-		exists ($lrp : LeagueRosterPosition( ) and $trp : TeamRosterPosition( leagueId == ( $lrp.getLeagueId() ) , slotNumber == ( $lrp.getSlotNumber() ) ) and $team : FantasyTeam( )) 
+		exists ($lrp : LeagueRosterPosition( ) and $trp : TeamRosterPosition( leagueId == ( $lrp.getLeagueId() ) , slotNumber == ( $lrp.getSlotNumber() ) ) and $team : FantasyTeam( rosterPosition.player.positionType != null )) 
 	then
 end
