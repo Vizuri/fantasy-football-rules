@@ -1,9 +1,14 @@
 package com.vizuri.fantasy_football_brms;
 
-import java.lang.Number;
+import com.vizuri.rules.domain.FantasyLeague;
+import com.vizuri.rules.domain.FantasyTeam;
+import com.vizuri.rules.domain.Player;
+import com.vizuri.rules.domain.LeagueRosterPosition;
+import com.vizuri.rules.domain.TeamRosterPosition;
 
 rule "Invalid Team Roster Position"
 	dialect "mvel"
 	when
+		exists ($lrp : LeagueRosterPosition( ) and $trp : TeamRosterPosition( leagueId == ( $lrp.getLeagueId() ) , slotNumber == ( $lrp.getSlotNumber() ) ) and $team : FantasyTeam( )) 
 	then
 end
