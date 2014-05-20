@@ -1,2 +1,2 @@
-'Violation.details' : ["Invalid Roster Size", "Invalid Fantasy Team Size"]
+'Violation.details' : ["Invalid Roster Size", "Invalid Fantasy Team Size", "Invalid Team Roster Position"]
 'Violation.severityString' : ["INFO","WARNING","ERROR","FATAL"]
