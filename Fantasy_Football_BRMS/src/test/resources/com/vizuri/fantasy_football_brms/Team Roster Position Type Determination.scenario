@@ -3,6 +3,12 @@
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
+    <fact-data>
+      <type>LeagueRosterPosition</type>
+      <fieldData/>
+      <name>$lrp</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
   </fixtures>
   <rules/>
@@ -24,6 +30,12 @@
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Player</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
