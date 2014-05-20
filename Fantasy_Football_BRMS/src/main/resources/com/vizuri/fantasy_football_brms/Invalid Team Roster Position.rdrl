@@ -13,4 +13,8 @@ rule "Invalid Team Roster Position"
 	when
 		exists ($lrp : LeagueRosterPosition( $lrpLeagueId : leagueId, $lrpSlotNumber : slotNumber, $lrpPositionTypeString : positionTypeString) and $trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player) and FantasyTeam( teamRosterPosition != null , teamRosterPosition.player == $trpPlayer , teamRosterPosition.player.positionTypeString != $lrpPositionTypeString )) 
 	then
+		Violation fact0 = new Violation();
+		fact0.setSeverityString( "ERROR" );
+		fact0.setDetails( "Invalid Roster Size" );
+		insert( fact0 );
 end
