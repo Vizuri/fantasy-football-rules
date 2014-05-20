@@ -15,6 +15,6 @@ rule "Invalid Team Roster Position"
 	then
 		Violation fact0 = new Violation();
 		fact0.setSeverityString( "ERROR" );
-		fact0.setDetails( "Invalid Roster Size" );
+		fact0.setDetails( "Invalid Team Roster Position" );
 		insert( fact0 );
 end
