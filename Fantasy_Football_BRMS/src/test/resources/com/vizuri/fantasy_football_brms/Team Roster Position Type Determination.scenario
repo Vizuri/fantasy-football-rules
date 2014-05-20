@@ -11,9 +11,6 @@
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.FantasyLeague</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
