@@ -5,6 +5,8 @@ import com.vizuri.rules.domain.FantasyTeam;
 import com.vizuri.rules.domain.Player;
 import com.vizuri.rules.domain.LeagueRosterPosition;
 import com.vizuri.rules.domain.TeamRosterPosition;
+import com.vizuri.rules.domain.Violation;
+import com.vizuri.rules.domain.Severity;
 
 rule "Invalid Team Roster Position"
 	dialect "mvel"
