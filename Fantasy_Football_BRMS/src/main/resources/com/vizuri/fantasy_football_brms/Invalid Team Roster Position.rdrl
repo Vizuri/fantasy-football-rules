@@ -15,4 +15,8 @@ rule "Invalid Team Roster Position"
 	when
 		exists ($lrp : LeagueRosterPosition( $lrpLeagueId : leagueId, $lrpSlotNumber : slotNumber) and $trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player) and FantasyTeam( teamRosterPosition != null , teamRosterPosition.player == $trpPlayer , teamRosterPosition.player.position != null )) 
 	then
+		Violation $violation = new Violation();
+		$violation.setSeverityString( "ERROR" );
+		$violation.setDetails( "Invalid Team Roster Position" );
+		insert( $violation );
 end
