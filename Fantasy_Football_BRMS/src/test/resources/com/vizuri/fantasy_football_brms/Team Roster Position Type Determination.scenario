@@ -5,7 +5,13 @@
   <fixtures>
     <fact-data>
       <type>Player</type>
-      <fieldData/>
+      <fieldData>
+        <field-data>
+          <name>positionTypeString</name>
+          <value>QB</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
       <name>$player</name>
       <isModify>false</isModify>
     </fact-data>
@@ -41,6 +47,12 @@
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Violation</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.Position</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.PositionType</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
