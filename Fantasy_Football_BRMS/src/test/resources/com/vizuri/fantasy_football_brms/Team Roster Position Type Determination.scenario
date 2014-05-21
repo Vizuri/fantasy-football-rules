@@ -52,6 +52,8 @@
       <fieldData>
         <field-data>
           <name>positionTypeString</name>
+          <value>WR</value>
+          <nature>4</nature>
         </field-data>
       </fieldData>
       <name>$player</name>
