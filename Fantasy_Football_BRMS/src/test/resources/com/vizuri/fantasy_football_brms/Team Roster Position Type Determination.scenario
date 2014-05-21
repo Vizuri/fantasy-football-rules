@@ -26,28 +26,6 @@
       <isModify>false</isModify>
     </fact-data>
     <fact-data>
-      <type>LeagueRosterPosition</type>
-      <fieldData>
-        <field-data>
-          <name>leagueId</name>
-          <value>100</value>
-          <nature>1</nature>
-        </field-data>
-        <field-data>
-          <name>slotNumber</name>
-          <value>1</value>
-          <nature>1</nature>
-        </field-data>
-        <field-data>
-          <name>positionTypeString</name>
-          <value>RB</value>
-          <nature>4</nature>
-        </field-data>
-      </fieldData>
-      <name>$lrp</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
       <type>Player</type>
       <fieldData>
         <field-data>
