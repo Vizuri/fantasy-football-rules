@@ -4,34 +4,10 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>LeagueRosterPosition</type>
-      <fieldData>
-        <field-data>
-          <name>leagueId</name>
-          <value>100</value>
-          <nature>1</nature>
-        </field-data>
-        <field-data>
-          <name>slotNumber</name>
-          <value>1</value>
-          <nature>1</nature>
-        </field-data>
-        <field-data>
-          <name>positionTypeString</name>
-          <value>RB</value>
-          <nature>4</nature>
-        </field-data>
-      </fieldData>
-      <name>$lrp</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
       <type>Player</type>
       <fieldData>
         <field-data>
           <name>positionTypeString</name>
-          <value>RB</value>
-          <nature>4</nature>
         </field-data>
       </fieldData>
       <name>$player</name>
@@ -40,11 +16,6 @@
     <fact-data>
       <type>TeamRosterPosition</type>
       <fieldData>
-        <field-data>
-          <name>player</name>
-          <value>=$player</value>
-          <nature>2</nature>
-        </field-data>
         <field-data>
           <name>leagueId</name>
           <value>100</value>
@@ -59,12 +30,30 @@
       <name>$trp</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>LeagueRosterPosition</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>100</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$lrp</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
     <expect-fact>
       <fieldValues>
         <expect-field>
           <fieldName>severity</fieldName>
-          <expected>Severity.WARNING</expected>
+          <expected>Severity.ERROR</expected>
+          <operator>==</operator>
+          <nature>4</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>details</fieldName>
+          <expected>Invalid Team Roster Position</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
@@ -74,12 +63,21 @@
     </expect-fact>
   </fixtures>
   <rules/>
-  <inclusive>false</inclusive>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.Player</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.Violation</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
