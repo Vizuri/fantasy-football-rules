@@ -32,7 +32,7 @@
   <rules>
     <string>Invalid Team Roster Position</string>
   </rules>
-  <inclusive>false</inclusive>
+  <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
     <imports>
