@@ -38,11 +38,6 @@
           <value>1</value>
           <nature>1</nature>
         </field-data>
-        <field-data>
-          <name>playerId</name>
-          <value>1000</value>
-          <nature>1</nature>
-        </field-data>
       </fieldData>
       <name>$trp</name>
       <isModify>false</isModify>
