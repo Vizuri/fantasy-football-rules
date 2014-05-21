@@ -94,10 +94,10 @@
         <type>com.vizuri.rules.domain.Player</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
+        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
+        <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
