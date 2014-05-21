@@ -5,7 +5,13 @@
   <fixtures>
     <fact-data>
       <type>Player</type>
-      <fieldData/>
+      <fieldData>
+        <field-data>
+          <name>positionTypeString</name>
+          <value>ddd</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
       <name>$player</name>
       <isModify>false</isModify>
     </fact-data>
@@ -34,9 +40,6 @@
         <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Player</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.TeamRosterPosition</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
@@ -44,6 +47,9 @@
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.Position</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.vizuri.rules.domain.Player</type>
       </org.drools.workbench.models.datamodel.imports.Import>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.vizuri.rules.domain.PositionType</type>
