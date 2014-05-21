@@ -73,7 +73,9 @@
       <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
-  <rules/>
+  <rules>
+    <string>Invalid Team Roster Position</string>
+  </rules>
   <inclusive>true</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
