@@ -49,7 +49,11 @@
     </fact-data>
     <fact-data>
       <type>Player</type>
-      <fieldData/>
+      <fieldData>
+        <field-data>
+          <name>positionTypeString</name>
+        </field-data>
+      </fieldData>
       <name>$player</name>
       <isModify>false</isModify>
     </fact-data>
