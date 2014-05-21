@@ -10,7 +10,7 @@ rule "Invalid Team Roster Position"
 	dialect "mvel"
 	when
 		$lrp : LeagueRosterPosition( $lrpLeagueId : leagueId, $lrpSlotNumber : slotNumber, $lrpPositionTypeString : positionTypeString)
-		$trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player != null ) 
+		$trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player != null )
 		Player( this == $trpPlayer , position != null , positionTypeString != $lrpPositionTypeString )
 	then
 		Violation $violation = new Violation();
