@@ -13,7 +13,7 @@ import com.vizuri.rules.domain.PositionType;
 rule "Invalid Team Roster Position"
 	dialect "mvel"
 	when
-		exists ($lrp : LeagueRosterPosition( $lrpLeagueId : leagueId == null , $lrpSlotNumber : slotNumber == null ) and $trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player) and FantasyTeam( teamRosterPosition != null )) 
+		exists ($lrp : LeagueRosterPosition( $lrpLeagueId : leagueId != null , $lrpSlotNumber : slotNumber != null , $lrpPositionTypeString : positionTypeString != null ) and $trp : TeamRosterPosition( leagueId == $lrpLeagueId , slotNumber == $lrpSlotNumber , $trpPlayer : player) and FantasyTeam( teamRosterPosition != null )) 
 	then
 		Violation $violation = new Violation();
 		$violation.setSeverityString( "ERROR" );
