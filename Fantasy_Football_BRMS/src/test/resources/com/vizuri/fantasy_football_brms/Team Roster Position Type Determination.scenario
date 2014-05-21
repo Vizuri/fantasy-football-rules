@@ -25,6 +25,40 @@
       <name>$lrp</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>TeamRosterPosition</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>100</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>slotNumber</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>playerId</name>
+          <value>1000</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$trp</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>FantasyTeam</type>
+      <fieldData>
+        <field-data>
+          <name>teamRosterPosition</name>
+          <value>=$trp</value>
+          <nature>2</nature>
+        </field-data>
+      </fieldData>
+      <name>$team</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
   </fixtures>
   <rules/>
