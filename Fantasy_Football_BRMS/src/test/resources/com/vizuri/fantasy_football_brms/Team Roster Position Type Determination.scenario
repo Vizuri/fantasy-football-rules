@@ -5,13 +5,7 @@
   <fixtures>
     <fact-data>
       <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>positionTypeString</name>
-          <value>QB</value>
-          <nature>4</nature>
-        </field-data>
-      </fieldData>
+      <fieldData/>
       <name>$player</name>
       <isModify>false</isModify>
     </fact-data>
