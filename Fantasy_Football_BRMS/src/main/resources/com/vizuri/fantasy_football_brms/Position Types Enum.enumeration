@@ -1,1 +1,2 @@
 'Position.positionTypeString' : ["QB", "WR", "RB", "TE", "K", "D"]
+'LeagueRosterPosition.positionTypeString' : ["QB", "WR", "RB", "TE", "K", "D"]
