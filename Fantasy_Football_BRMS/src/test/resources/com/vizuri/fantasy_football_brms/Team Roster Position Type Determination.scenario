@@ -77,28 +77,6 @@
   <inclusive>false</inclusive>
   <packageName>com.vizuri.fantasy_football_brms</packageName>
   <imports>
-    <imports>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.FantasyLeague</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.FantasyTeam</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Violation</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Severity</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.Player</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.TeamRosterPosition</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.rules.domain.LeagueRosterPosition</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-    </imports>
+    <imports/>
   </imports>
 </scenario>
