@@ -4,16 +4,6 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>Player</type>
-      <fieldData>
-        <field-data>
-          <name>positionTypeString</name>
-        </field-data>
-      </fieldData>
-      <name>$player</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
       <type>TeamRosterPosition</type>
       <fieldData>
         <field-data>
