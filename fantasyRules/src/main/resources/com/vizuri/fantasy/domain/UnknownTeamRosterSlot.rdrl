@@ -11,7 +11,7 @@ rule "UnknownTeamRosterSlot"
 	then
 		Violation $violation = new Violation();
 		$violation.setSeverity( Severity.ERROR );
-		$violation.setDetails( "Unknown slot number: " + String.valueOf($slotNumber) );
+		$violation.setDetails( $slotNumber + " is an invalid slot number" );
 		$violation.setSlotNumber( $slotNumber );
 		insert( $violation );
 		System.err.println($violation);
