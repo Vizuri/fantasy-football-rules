@@ -1,0 +1,9 @@
+package org.test;
+
+import java.lang.Number;
+
+rule "Test"
+	dialect "mvel"
+	when
+	then
+end
