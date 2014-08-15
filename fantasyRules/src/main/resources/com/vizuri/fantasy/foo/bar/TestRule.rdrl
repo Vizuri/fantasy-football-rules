@@ -1,0 +1,9 @@
+package com.vizuri.fantasy.foo.bar;
+
+import java.lang.Number;
+
+rule "TestRule"
+	dialect "mvel"
+	when
+	then
+end
