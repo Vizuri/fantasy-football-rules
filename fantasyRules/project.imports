@@ -1,10 +1,6 @@
 <configuration>
   <imports>
-    <imports>
-      <import>
-        <type>com.vizuri.fantasy.domain.LeagueDto</type>
-      </import>
-    </imports>
+    <imports/>
   </imports>
   <version>1.0</version>
 </configuration>
