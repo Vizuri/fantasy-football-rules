@@ -5,5 +5,11 @@ import java.lang.Number;
 rule "UnknownTeamRosterSlot"
 	dialect "mvel"
 	when
+		$teamRoster : TeamRosterDto( $leagueId : leagueId, $slotNumber : slotNumber)
+		not ($leagueRoster : LeagueRosterDto( leagueId == $leagueId , slot == $slotNumber )) 
 	then
+		Violation fact0 = new Violation();
+		fact0.setSeverity( Severity.FATAL );
+		fact0.setDescription( "\"Uknown slot: \" + $slotNumber" );
+		insert( fact0 );
 end
