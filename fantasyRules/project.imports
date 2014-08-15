@@ -2,7 +2,7 @@
   <imports>
     <imports>
       <import>
-        <type>java.lang.Number</type>
+        <type>com.vizuri.fantasy.domain.LeagueDto</type>
       </import>
     </imports>
   </imports>
