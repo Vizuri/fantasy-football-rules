@@ -11,6 +11,7 @@ rule "UnknownTeamRosterSlot"
 	then
 		Violation fact0 = new Violation();
 		fact0.setSeverity( Severity.ERROR );
+		fact0.setDetails( "Unknown slot: " + $slotNumber + "!" );
 		insert( fact0 );
 		System.err.println("What is this? " + $slotNumber);
 end
