@@ -55,10 +55,6 @@
   <inclusive>false</inclusive>
   <packageName>com.vizuri.fantasy.domain</packageName>
   <imports>
-    <imports>
-      <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.vizuri.fantasy.types.Severity</type>
-      </org.drools.workbench.models.datamodel.imports.Import>
-    </imports>
+    <imports/>
   </imports>
 </scenario>
