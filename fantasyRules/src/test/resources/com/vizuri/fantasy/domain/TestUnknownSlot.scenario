@@ -11,11 +11,38 @@
           <value>5</value>
           <nature>1</nature>
         </field-data>
+        <field-data>
+          <name>leagueId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
       </fieldData>
       <name>$teamRoster</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>LeagueRosterDto</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>slot</name>
+          <value>5</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$leagueRoster</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues/>
+      <name>Violation</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
