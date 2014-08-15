@@ -1,9 +1,0 @@
-package com.vizuri.fantasy.domain.foo;
-
-import java.lang.Number;
-
-rule "FooRule"
-	dialect "mvel"
-	when
-	then
-end
