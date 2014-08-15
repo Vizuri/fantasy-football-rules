@@ -9,9 +9,9 @@ rule "UnknownTeamRosterSlot"
 		$teamRoster : TeamRosterDto( $leagueId : leagueId, $slotNumber : slotNumber)
 		not ($leagueRoster : LeagueRosterDto( leagueId == $leagueId , slot == $slotNumber )) 
 	then
-		Violation fact0 = new Violation();
-		fact0.setSeverity( Severity.ERROR );
-		fact0.setDetails( "Unknown slot: " + $slotNumber + "!" );
-		insert( fact0 );
-		System.err.println("What is this? " + $slotNumber);
+		Violation $violation = new Violation();
+		$violation.setSeverity( Severity.ERROR );
+		$violation.setDetails( "Unknown slot: " + $slotNumber + "!" );
+		insert( $violation );
+		System.err.println($violation);
 end
