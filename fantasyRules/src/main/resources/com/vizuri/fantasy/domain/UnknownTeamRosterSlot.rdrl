@@ -10,6 +10,6 @@ rule "UnknownTeamRosterSlot"
 	then
 		Violation fact0 = new Violation();
 		fact0.setSeverity( Severity.FATAL );
-		fact0.setDescription( "\"Uknown slot: \" + $slotNumber" );
+		fact0.setDescription( "Unknown slot:  $slotNumber" );
 		insert( fact0 );
 end
