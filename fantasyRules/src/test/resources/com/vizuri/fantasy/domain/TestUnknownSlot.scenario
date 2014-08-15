@@ -39,14 +39,7 @@
     </fact-data>
     <execution-trace/>
     <expect-fact>
-      <fieldValues>
-        <expect-field>
-          <fieldName>severity</fieldName>
-          <expected>Severity.ERROR</expected>
-          <operator>==</operator>
-          <nature>4</nature>
-        </expect-field>
-      </fieldValues>
+      <fieldValues/>
       <name>Violation</name>
       <anonymous>true</anonymous>
     </expect-fact>
