@@ -1,1 +1,1 @@
-'Violation.severityString' : "INFO","WARNING","ERROR"
+'Violation.severityString' : ["INFO","WARNING","ERROR"]
