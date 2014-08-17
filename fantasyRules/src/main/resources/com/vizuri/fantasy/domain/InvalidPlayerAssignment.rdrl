@@ -6,7 +6,7 @@ rule "InvalidPlayerAssignment"
 	dialect "mvel"
 	when
 		LeagueRoster( $leagueId : leagueId != null , $slotNumber : slot != null , $validPositionList : validPositions != null )
-		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , player != null , $playerPosition : player.position != null , $playerId : player.id != null , eval( !$validPositionList.contains($playerPosition) ), $teamId : teamId != null )
+		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , player != null , $playerPosition : player.position != null , eval( !$validPositionList.contains($playerPosition) ), $teamId : teamId != null )
 	then
 		Violation fact0 = new Violation();
 		fact0.setSeverity( Severity.ERROR );
