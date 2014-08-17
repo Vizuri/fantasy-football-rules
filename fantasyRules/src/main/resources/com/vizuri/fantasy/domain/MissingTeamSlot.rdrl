@@ -5,9 +5,9 @@ import java.lang.Number;
 rule "MissingTeamSlot"
 	dialect "mvel"
 	when
-		LeagueRoster( $leagueId : leagueId, $slotNumber : slot)
-		League( id == $leagueId , $currentWeek : currentWeek)
-		Team( $teamId : id)
+		LeagueRoster( $leagueId : leagueId != null , $slotNumber : slot != null )
+		League( id == $leagueId , $currentWeek : currentWeek != null )
+		Team( $teamId : id != null )
 		not (TeamRoster( leagueId == $leagueId , week == $currentWeek , slotNumber == $slotNumber , teamId == $teamId )) 
 	then
 		Violation fact0 = new Violation();
