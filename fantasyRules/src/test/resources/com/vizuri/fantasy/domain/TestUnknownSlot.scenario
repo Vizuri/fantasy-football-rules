@@ -4,16 +4,16 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>TeamRosterDto</type>
+      <type>TeamRoster</type>
       <fieldData>
-        <field-data>
-          <name>slotNumber</name>
-          <value>5</value>
-          <nature>1</nature>
-        </field-data>
         <field-data>
           <name>leagueId</name>
           <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>slotNumber</name>
+          <value>6</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -21,7 +21,7 @@
       <isModify>false</isModify>
     </fact-data>
     <fact-data>
-      <type>LeagueRosterDto</type>
+      <type>LeagueRoster</type>
       <fieldData>
         <field-data>
           <name>leagueId</name>
@@ -30,7 +30,7 @@
         </field-data>
         <field-data>
           <name>slot</name>
-          <value>6</value>
+          <value>5</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
