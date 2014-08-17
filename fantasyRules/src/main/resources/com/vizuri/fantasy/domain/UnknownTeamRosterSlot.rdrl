@@ -6,8 +6,8 @@ import com.vizuri.fantasy.types.Severity;
 rule "UnknownTeamRosterSlot"
 	dialect "mvel"
 	when
-		$teamRoster : TeamRosterDto( $leagueId : leagueId, $slotNumber : slotNumber)
-		not ($leagueRoster : LeagueRosterDto( leagueId == $leagueId , slot == $slotNumber )) 
+		TeamRoster( $leagueId : leagueId, $slotNumber : slotNumber)
+		not (LeagueRoster( leagueId == $leagueId , slot == $slotNumber )) 
 	then
 		Violation $violation = new Violation();
 		$violation.setSeverity( Severity.ERROR );
