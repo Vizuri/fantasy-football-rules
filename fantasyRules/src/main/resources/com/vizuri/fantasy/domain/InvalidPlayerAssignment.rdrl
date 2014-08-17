@@ -6,6 +6,6 @@ rule "InvalidPlayerAssignment"
 	dialect "mvel"
 	when
 		LeagueRoster( $leagueId : leagueId != null , $slotNumber : slot != null , $validPositionList : validPositions != null )
-		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , player != null )
+		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , player != null , $playerPosition : player.position != null , eval( $validPositions.contains($playerPosition) ))
 	then
 end
