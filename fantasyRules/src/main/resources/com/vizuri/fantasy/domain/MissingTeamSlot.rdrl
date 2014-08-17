@@ -15,5 +15,6 @@ rule "MissingTeamSlot"
 		fact0.setTeamId( $teamId );
 		fact0.setSlotNumber( $slotNumber );
 		fact0.setDescription( "Team missing slot" );
+		fact0.setSeverity( Severity.ERROR );
 		insert( fact0 );
 end
