@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "InvalidPlayerAssignment"
 	dialect "mvel"
 	when
-		LeagueRoster( $leagueId : leagueId, $slotNumber : slot, $positions : validPositionCSVList)
-		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber )
+		LeagueRoster( $leagueId : leagueId != null , $slotNumber : slot != null , $validPositionList : validPositions != null )
+		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , player != null )
 	then
 end
