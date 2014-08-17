@@ -6,5 +6,7 @@ rule "MissingTeamSlot"
 	dialect "mvel"
 	when
 		LeagueRoster( $leagueId : leagueId, $slotNumber : slot)
+		League( id == $leagueId , $currentWeek : currentWeek)
+		not (TeamRoster( leagueId == $leagueId , week == $currentWeek , slotNumber == $slotNumber , $teamId : teamId)) 
 	then
 end
