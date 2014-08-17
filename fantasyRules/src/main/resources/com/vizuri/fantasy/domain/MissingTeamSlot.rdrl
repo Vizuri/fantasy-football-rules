@@ -7,6 +7,12 @@ rule "MissingTeamSlot"
 	when
 		LeagueRoster( $leagueId : leagueId, $slotNumber : slot)
 		League( id == $leagueId , $currentWeek : currentWeek)
-		not (TeamRoster( leagueId == $leagueId , week == $currentWeek , slotNumber == $slotNumber , $teamId : teamId)) 
+		Team( $teamId : id)
+		not (TeamRoster( leagueId == $leagueId , week == $currentWeek , slotNumber == $slotNumber , teamId == $teamId )) 
 	then
+		Violation fact0 = new Violation();
+		fact0.setLeagueId( $leagueId );
+		fact0.setTeamId( $teamId );
+		fact0.setSlotNumber( null );
+		insert( fact0 );
 end
