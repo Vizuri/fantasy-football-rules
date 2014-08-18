@@ -6,7 +6,7 @@ rule "HigherRankedNotification"
 	dialect "mvel"
 	when
 		LeagueRoster( $leagueId : leagueId != null , $activeSlotNumber : slot != null , bench == false )
-		$activeTeamRoster : TeamRoster( leagueId == $leagueId , slotNumber == $activeSlotNumber , $activePlayerId : playerId != null , $week : week != null , $teamId : teamId != null )
+		TeamRoster( leagueId == $leagueId , slotNumber == $activeSlotNumber , $activePlayerId : playerId != null , $week : week != null , $teamId : teamId != null )
 		Player( id == $activePlayerId , $position : position != null , $ranking : positionRankingOrder != null )
 		LeagueRoster( leagueId == $leagueId , bench == true , $benchSlotNumber : slot != null )
 		TeamRoster( leagueId == $leagueId , slotNumber == $benchSlotNumber , week == $week , teamId == $teamId , $benchPlayerId : playerId != null )
