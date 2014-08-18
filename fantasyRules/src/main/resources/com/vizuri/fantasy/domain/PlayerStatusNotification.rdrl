@@ -1,0 +1,22 @@
+package com.vizuri.fantasy.domain;
+
+import java.lang.Number;
+import com.vizuri.fantasy.types.PlayerStatusType;
+
+rule "PlayerStatusNotification"
+	dialect "mvel"
+	when
+		$teamRoster : TeamRoster( $week : week != null , $playerId : playerId != null , $slotNumber : slotNumber != null , $leagueId : leagueId != null )
+		LeagueRoster( leagueId == $leagueId , slot == $slotNumber , bench == false )
+		League( id == $leagueId , $year : year != null )
+		PlayerStatus( playerId == $playerId , year == $year , week == $week , statusType == PlayerStatusType.INJURED_RESERVE || statusType == PlayerStatusType.OUT )
+	then
+		Violation fact0 = new Violation();
+		fact0.setDescription( "Non-bench player in active slot" );
+		fact0.setLeagueId( $leagueId );
+		fact0.setSeverity( Severity.WARNING );
+		fact0.setSlotNumber( $slotNumber );
+		fact0.setTeamId( $teamRoster.teamId );
+		fact0.setWeek( $week );
+		insertLogical( fact0 );
+end
