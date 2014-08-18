@@ -107,6 +107,12 @@
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
+        <expect-field>
+          <fieldName>title</fieldName>
+          <expected>Empty slot</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
       </fieldValues>
       <name>Violation</name>
       <anonymous>true</anonymous>
@@ -141,7 +147,13 @@
           <fieldName>week</fieldName>
           <expected>16</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>title</fieldName>
+          <expected>Empty slot</expected>
+          <operator>==</operator>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>Violation</name>
