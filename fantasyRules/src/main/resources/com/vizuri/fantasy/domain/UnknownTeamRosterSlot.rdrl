@@ -17,5 +17,4 @@ rule "UnknownTeamRosterSlot"
 		$violation.setTeamId( $teamRoster.teamId );
 		$violation.setWeek( $teamRoster.week );
 		insert( $violation );
-		System.err.println($violation);
 end
