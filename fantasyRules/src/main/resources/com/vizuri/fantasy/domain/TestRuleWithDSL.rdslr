@@ -1,9 +1,0 @@
-package com.vizuri.fantasy.domain;
-
-import java.lang.Number;
-
-rule "TestRuleWithDSL"
-	dialect "mvel"
-	when
-	then
-end
