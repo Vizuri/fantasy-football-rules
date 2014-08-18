@@ -5,5 +5,13 @@ import java.lang.Number;
 rule "TeamDuesLate"
 	dialect "mvel"
 	when
+		Team( $leagueId : leagueId != null , $teamId : id != null )
+		League( id == $leagueId , currentWeek > 3 )
 	then
+		Violation fact0 = new Violation();
+		fact0.setLeagueId( $leagueId );
+		fact0.setTeamId( $teamId );
+		fact0.setSeverity( Severity.WARNING );
+		fact0.setDescription( "Pay your dues!" );
+		insert( fact0 );
 end
