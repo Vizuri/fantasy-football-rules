@@ -11,7 +11,7 @@ rule "TeamDuesLate"
 		Violation fact0 = new Violation();
 		fact0.setLeagueId( $leagueId );
 		fact0.setTeamId( $teamId );
-		fact0.setSeverity( Severity.WARNING );
+		fact0.setSeverity( Severity.ERROR );
 		fact0.setDescription( "Pay your dues!" );
 		insert( fact0 );
 end
