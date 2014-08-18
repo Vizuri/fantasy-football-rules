@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "PlayerOutWarning"
 	dialect "mvel"
 	when
+		$teamRoster : TeamRoster( $week : week != null , $playerId : playerId != null , $slotNumber : slotNumber != null , $leagueId : leagueId != null )
+		LeagueRoster( leagueId == $leagueId , slot == $slotNumber , bench == false )
+		League( id == $leagueId , $year : year != null )
+		PlayerStatus( playerId == $playerId , year == $year , week == $week , statusType == PlayerStatusType.INJURED_RESERVE || statusType == PlayerStatusType.OUT )
 	then
 end
