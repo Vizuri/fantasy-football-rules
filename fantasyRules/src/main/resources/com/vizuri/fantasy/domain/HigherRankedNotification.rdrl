@@ -13,11 +13,11 @@ rule "HigherRankedNotification"
 		Player( id == $benchPlayerId , position == $position , positionRankingOrder < $ranking )
 	then
 		Violation fact0 = new Violation();
-		fact0.setDescription( "Higher ranking player on bench" );
 		fact0.setLeagueId( $leagueId );
 		fact0.setSeverity( Severity.INFO );
 		fact0.setSlotNumber( $activeSlotNumber );
 		fact0.setTeamId( $teamId );
 		fact0.setWeek( $week );
+		fact0.setTitle( "Higher ranking player on bench" );
 		insert( fact0 );
 end
