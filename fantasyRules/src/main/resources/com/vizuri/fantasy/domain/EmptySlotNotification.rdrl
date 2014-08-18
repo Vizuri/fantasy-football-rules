@@ -5,5 +5,15 @@ import java.lang.Number;
 rule "EmptySlotNotification"
 	dialect "mvel"
 	when
+		League( $leagueId : id != null , $currentWeek : currentWeek != null )
+		$teamRoster : TeamRoster( leagueId == $leagueId , week == $currentWeek , playerId == null )
 	then
+		Violation fact0 = new Violation();
+		fact0.setDescription( "Empty slot" );
+		fact0.setLeagueId( $leagueId );
+		fact0.setSeverity( Severity.INFO );
+		fact0.setSlotNumber( $teamRoster.slotNumber );
+		fact0.setTeamId( $teamRoster.teamId );
+		fact0.setWeek( $currentWeek );
+		insert( fact0 );
 end
