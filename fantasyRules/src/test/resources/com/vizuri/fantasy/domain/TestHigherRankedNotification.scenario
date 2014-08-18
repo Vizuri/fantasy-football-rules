@@ -146,6 +146,48 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>leagueId</fieldName>
+          <expected>150</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>teamId</fieldName>
+          <expected>152</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>slotNumber</fieldName>
+          <expected>1</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>week</fieldName>
+          <expected>5</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>title</fieldName>
+          <expected>Higher ranking player on bench</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>severity</fieldName>
+          <expected>Severity.INFO</expected>
+          <operator>==</operator>
+          <nature>4</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Violation</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
