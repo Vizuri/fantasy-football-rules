@@ -3,3 +3,9 @@
 from collect (
    Team(leagueId == $league.id)
 )
+[then] Create a league size violation with title {$violation.title}
+Violation $violation = new Violation();
+$violation.setLeagueId( $leagueId );
+$violation.setSeverity( Severity.ERROR );
+$violation.setTitle( "Empty slot" );
+insert( $violation );
