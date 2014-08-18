@@ -6,7 +6,7 @@ import com.vizuri.fantasy.types.Severity;
 rule "UnknownTeamRosterSlot"
 	dialect "mvel"
 	when
-		TeamRoster( $leagueId : leagueId != null , $slotNumber : slotNumber != null , $teamId : teamId != null )
+		$teamRoster : TeamRoster( $leagueId : leagueId != null , $slotNumber : slotNumber != null )
 		not (LeagueRoster( leagueId == $leagueId , slot == $slotNumber )) 
 	then
 		Violation $violation = new Violation();
@@ -14,7 +14,8 @@ rule "UnknownTeamRosterSlot"
 		$violation.setDetails( "Invalid slot number" );
 		$violation.setSlotNumber( $slotNumber );
 		$violation.setLeagueId( $leagueId );
-		$violation.setTeamId( $teamId );
+		$violation.setTeamId( $teamRoster.teamId );
+		$violation.setWeek( $teamRoster.week );
 		insert( $violation );
 		System.err.println($violation);
 end
