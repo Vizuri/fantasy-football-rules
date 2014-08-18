@@ -162,6 +162,64 @@
       <ruleName>LeagueSizeConstraints</ruleName>
       <expectedFire>false</expectedFire>
     </expect-rule>
+    <fact-data>
+      <type>Team</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>200</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team10</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Team</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>200</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team11</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Team</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>200</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team12</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+    <expect-rule>
+      <ruleName>LeagueSizeConstraints</ruleName>
+      <expectedFire>false</expectedFire>
+    </expect-rule>
+    <fact-data>
+      <type>Team</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>200</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$team13</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+    <expect-rule>
+      <ruleName>LeagueSizeConstraints</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
