@@ -124,6 +124,11 @@
           <value>2</value>
           <nature>1</nature>
         </field-data>
+        <field-data>
+          <name>position</name>
+          <value>QB</value>
+          <nature>1</nature>
+        </field-data>
       </fieldData>
       <name>$playerLow</name>
       <isModify>false</isModify>
@@ -139,6 +144,11 @@
         <field-data>
           <name>positionRankingOrder</name>
           <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>position</name>
+          <value>QB</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -179,10 +189,10 @@
           <nature>1</nature>
         </expect-field>
         <expect-field>
-          <fieldName>severity</fieldName>
-          <expected>Severity.INFO</expected>
+          <fieldName>severityString</fieldName>
+          <expected>INFO</expected>
           <operator>==</operator>
-          <nature>4</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>Violation</name>
