@@ -1,0 +1,9 @@
+package com.vizuri.fantasy.domain;
+
+import java.lang.Number;
+
+rule "HigherRankedNotification"
+	dialect "mvel"
+	when
+	then
+end
