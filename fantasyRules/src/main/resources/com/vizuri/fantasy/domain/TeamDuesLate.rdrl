@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "TeamDuesLate"
 	dialect "mvel"
 	when
-		Team( $leagueId : leagueId != null , $teamId : id != null )
+		Team( $leagueId : leagueId != null , $teamId : id != null , paidDues == false )
 		League( id == $leagueId , currentWeek > 3 )
 	then
 		Violation fact0 = new Violation();
