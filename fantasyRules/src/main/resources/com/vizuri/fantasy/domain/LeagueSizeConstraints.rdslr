@@ -5,5 +5,13 @@ import java.lang.Number;
 rule "LeagueSizeConstraints"
 	dialect "mvel"
 	when
+		There is a Fantasy League
+		The total count of teams in this league is less than 2 or greater than 3
 	then
+		>Violation fact0 = new Violation();
+		>fact0.setLeagueId( $league.id );
+		>fact0.setSeverity( Severity.WARNING );
+		>fact0.setTitle( "Other(See Details)" );
+		>fact0.setDescription( "League size too big/small" );
+		>insertLogical( fact0 );
 end
