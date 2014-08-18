@@ -5,5 +5,17 @@ import java.lang.Number;
 rule "PlayerByeWeekWarning"
 	dialect "mvel"
 	when
+		$teamRoster : TeamRoster( $playerId : playerId != null , $week : week != null , $slotNumber : slotNumber != null , $leagueId : leagueId != null )
+		LeagueRoster( leagueId == $leagueId , bench == false , slot == $slotNumber )
+		Player( id == $playerId , $teamNickname : proTeamNickname != null )
+		ProTeam( nickname == $teamNickname , byeWeek == $week )
 	then
+		Violation fact0 = new Violation();
+		fact0.setDescription( "Player in non-bench slot that is on bye week" );
+		fact0.setLeagueId( $leagueId );
+		fact0.setSeverity( Severity.WARNING );
+		fact0.setSlotNumber( $slotNumber );
+		fact0.setTeamId( $teamRoster.teamId );
+		fact0.setWeek( $week );
+		insertLogical( fact0 );
 end
