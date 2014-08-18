@@ -1,8 +1,42 @@
 <scenario>
-  <name>TestInvalidPlayerAssignment</name>
+  <name>TestInvalidPlayerAssignment.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
-  <fixtures/>
+  <fixtures>
+    <fact-data>
+      <type>LeagueRoster</type>
+      <fieldData>
+        <field-data>
+          <name>leagueId</name>
+          <value>5</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>slot</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>validPositions</name>
+          <collectionFieldList>
+            <field-data>
+              <name>validPositions</name>
+              <value>QB</value>
+              <nature>1</nature>
+            </field-data>
+            <field-data>
+              <name>validPositions</name>
+              <value>TE</value>
+              <nature>1</nature>
+            </field-data>
+          </collectionFieldList>
+        </field-data>
+      </fieldData>
+      <name>$leagueRoster</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+  </fixtures>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.vizuri.fantasy.domain</packageName>
