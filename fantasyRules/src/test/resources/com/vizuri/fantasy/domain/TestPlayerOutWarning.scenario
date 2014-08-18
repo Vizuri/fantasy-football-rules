@@ -82,11 +82,62 @@
           <value>121</value>
           <nature>1</nature>
         </field-data>
+        <field-data>
+          <name>statusTypeString</name>
+          <value>Out</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>year</name>
+          <value>2013</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>week</name>
+          <value>10</value>
+          <nature>1</nature>
+        </field-data>
       </fieldData>
       <name>$playerStatus</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>leagueId</fieldName>
+          <expected>120</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>teamId</fieldName>
+          <expected>122</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>slotNumber</fieldName>
+          <expected>1</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>week</fieldName>
+          <expected>10</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>severityString</fieldName>
+          <expected>WARNING</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Violation</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
