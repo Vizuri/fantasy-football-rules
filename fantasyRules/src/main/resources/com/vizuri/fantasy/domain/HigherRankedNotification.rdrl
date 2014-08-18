@@ -10,7 +10,7 @@ rule "HigherRankedNotification"
 		Player( id == $activePlayerId , $position : position != null , $ranking : positionRankingOrder != null )
 		LeagueRoster( leagueId == $leagueId , bench == true , $benchSlotNumber : slot != null )
 		TeamRoster( leagueId == $leagueId , slotNumber == $benchSlotNumber , week == $week , teamId == $teamId , $benchPlayerId : playerId != null )
-		Player( id == $benchPlayerId , position == $position , positionRankingOrder > $ranking )
+		Player( id == $benchPlayerId , position == $position , positionRankingOrder < $ranking )
 	then
 		Violation fact0 = new Violation();
 		fact0.setDescription( "Higher ranking player on bench" );
