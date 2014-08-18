@@ -3,9 +3,3 @@
 from collect (
    Team(leagueId == $league.id)
 )
-[then] Create a league size violation
-Violation $violation = new Violation();
-$violation.setLeagueId( $leagueId );
-$violation.setSeverity( Severity.ERROR );
-$violation.setTitle( "Other" );
-insert( $violation );
