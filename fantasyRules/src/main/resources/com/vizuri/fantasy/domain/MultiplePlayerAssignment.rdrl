@@ -5,8 +5,8 @@ import java.lang.Number;
 rule "MultiplePlayerAssignment"
 	dialect "mvel"
 	when
-		TeamRoster( $teamId : teamId != null , $leagueId : leagueId != null , $playerId : playerId != null , $slotNumber : slotNumber)
-		TeamRoster( leagueId == $leagueId , $team2Id : teamId != $teamId , playerId == $playerId , $slotNumber2 : slotNumber)
+		TeamRoster( $teamId : teamId != null , $leagueId : leagueId != null , $playerId : playerId != null , $slotNumber : slotNumber, $week : week != null )
+		TeamRoster( leagueId == $leagueId , $team2Id : teamId != $teamId , playerId == $playerId , $slotNumber2 : slotNumber, week == $week )
 	then
 		Violation fact0 = new Violation();
 		fact0.setLeagueId( $leagueId );
