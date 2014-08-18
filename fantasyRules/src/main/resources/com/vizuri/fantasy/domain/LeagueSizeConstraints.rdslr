@@ -6,7 +6,7 @@ rule "LeagueSizeConstraints"
 	dialect "mvel"
 	when
 		There is a Fantasy League
-		The total count of teams in this league is less than 2 or greater than 3
+		The total count of teams in this league is less than 2 or greater than 12
 	then
 		>Violation fact0 = new Violation();
 		>fact0.setLeagueId( $league.id );
