@@ -6,7 +6,14 @@ rule "PlayerInactivated"
 	dialect "mvel"
 	when
 		League( $leagueId : id != null , $currentWeek : currentWeek != null )
-		TeamRoster( leagueId == $leagueId , week == $currentWeek , $playerId : playerId != null )
-		Player( id == $playerId )
+		$teamRoster : TeamRoster( leagueId == $leagueId , week == $currentWeek , $playerId : playerId != null )
+		Player( id == $playerId , active == false )
 	then
+		Violation fact0 = new Violation();
+		fact0.setLeagueId( $leagueId );
+		fact0.setTeamId( $teamRoster.teamId );
+		fact0.setSlotNumber( $teamRoster.slotNumber );
+		fact0.setSeverity( Severity.WARNING );
+		fact0.setDescription( "Player is inactive" );
+		insert( fact0 );
 end
