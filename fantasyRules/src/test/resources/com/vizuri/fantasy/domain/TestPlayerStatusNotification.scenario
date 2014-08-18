@@ -1,5 +1,5 @@
 <scenario>
-  <name>TestPlayerOutWarning.scenario</name>
+  <name>TestPlayerStatusNotification.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
@@ -84,7 +84,7 @@
         </field-data>
         <field-data>
           <name>statusTypeString</name>
-          <value>Out</value>
+          <value>Questionable</value>
           <nature>4</nature>
         </field-data>
         <field-data>
@@ -130,7 +130,7 @@
         </expect-field>
         <expect-field>
           <fieldName>severityString</fieldName>
-          <expected>WARNING</expected>
+          <expected>INFO</expected>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
