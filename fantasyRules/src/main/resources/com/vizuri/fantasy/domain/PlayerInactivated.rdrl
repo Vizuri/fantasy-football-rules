@@ -5,5 +5,8 @@ import java.lang.Number;
 rule "PlayerInactivated"
 	dialect "mvel"
 	when
+		League( $leagueId : id != null , $currentWeek : currentWeek != null )
+		TeamRoster( leagueId == $leagueId , week == $currentWeek , $playerId : playerId != null )
+		Player( id == $playerId )
 	then
 end
