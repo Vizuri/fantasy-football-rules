@@ -8,5 +8,6 @@ rule "LeagueSizeConstraints"
 		There is a Fantasy League
 		The total count of teams in this league is less than 2 or greater than 12
 	then
-		Create violation with description Ouch!
+		Create violation with description "Ouch!"
+		>System.err.println("Violation: " + $violation);
 end
