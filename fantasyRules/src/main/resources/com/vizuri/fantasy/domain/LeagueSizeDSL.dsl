@@ -3,4 +3,4 @@
 from collect (
    Team(leagueId == $league.id)
 )
-[then]Create violation with description {description}=Violation $violation = new Violation();$violation.setLeagueId( $league.id );$violation.setSeverity( Severity.WARNING );$violation.setTitle( "Other(See Details)" );$violation.setDescription( {description} );insertLogical( $violation );
+[then]Create violation with league size description=Violation $violation = new Violation();$violation.setLeagueId( $league.id );$violation.setSeverity( Severity.WARNING );$violation.setTitle( "Other(See Details)" );$violation.setDescription( "League should have {lessValue} and {greaterValue} teams" );insertLogical( $violation );
