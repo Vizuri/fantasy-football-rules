@@ -5,5 +5,21 @@ import java.lang.Number;
 rule "MultiplePlayerAssignment"
 	dialect "mvel"
 	when
+		TeamRoster( $teamId : teamId != null , $leagueId : leagueId != null , $playerId : playerId != null , $slotNumber : slotNumber)
+		TeamRoster( leagueId == $leagueId , $team2Id : teamId != $teamId , playerId == $playerId , $slotNumber2 : slotNumber)
 	then
+		Violation fact0 = new Violation();
+		fact0.setLeagueId( $leagueId );
+		fact0.setTeamId( $teamId );
+		fact0.setSlotNumber( $slotNumber );
+		fact0.setSeverity( Severity.ERROR );
+		fact0.setDescription( "Player on multiple teams" );
+		insert( fact0 );
+		Violation fact1 = new Violation();
+		fact1.setLeagueId( $leagueId );
+		fact1.setTeamId( $team2Id );
+		fact1.setSlotNumber( $slotNumber2 );
+		fact1.setSeverity( Severity.ERROR );
+		fact1.setDescription( "Player on multiple teams" );
+		insert( fact1 );
 end
