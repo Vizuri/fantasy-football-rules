@@ -1,1 +1,2 @@
 'Violation.severityString' : ["INFO","WARNING","ERROR"]
+'PlayerStatus.statusTypeString' : ["Probable","Questionable","Doubtful","Out","Injured Reserve"]
