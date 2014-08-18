@@ -1,9 +1,0 @@
-package com.vizuri.fantasy.domain;
-
-import java.lang.Number;
-
-rule "LeagueSizeConstraints"
-	dialect "mvel"
-	when
-	then
-end
