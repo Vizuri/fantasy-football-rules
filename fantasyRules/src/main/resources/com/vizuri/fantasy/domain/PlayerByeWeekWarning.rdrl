@@ -1,0 +1,9 @@
+package com.vizuri.fantasy.domain;
+
+import java.lang.Number;
+
+rule "PlayerByeWeekWarning"
+	dialect "mvel"
+	when
+	then
+end
