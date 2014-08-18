@@ -5,5 +5,7 @@ import java.lang.Number;
 rule "LeagueSizeConstraints"
 	dialect "mvel"
 	when
+		There is a Fantasy League
+		The total count of teams in this league is less than 2 or greater than 12
 	then
 end
