@@ -6,14 +6,15 @@ rule "InvalidPlayerAssignment"
 	dialect "mvel"
 	when
 		LeagueRoster( $leagueId : leagueId != null , $slotNumber : slot != null , $validPositionList : validPositions != null )
-		TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , $teamId : teamId != null , $playerId : playerId != null )
+		$teamRoster : TeamRoster( leagueId == $leagueId , slotNumber == $slotNumber , $playerId : playerId != null )
 		Player( id == $playerId , $position : position != null , eval( !$validPositionList.contains($position) ))
 	then
 		Violation fact0 = new Violation();
 		fact0.setSeverity( Severity.ERROR );
 		fact0.setLeagueId( $leagueId );
-		fact0.setTeamId( $teamId );
+		fact0.setTeamId( $teamRoster.teamId );
 		fact0.setSlotNumber( $slotNumber );
 		fact0.setDescription( "Invalid player type in slot" );
+		fact0.setWeek( $teamRoster.week );
 		insert( fact0 );
 end
