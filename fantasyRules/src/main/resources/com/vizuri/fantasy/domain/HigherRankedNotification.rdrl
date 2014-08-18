@@ -5,5 +5,7 @@ import java.lang.Number;
 rule "HigherRankedNotification"
 	dialect "mvel"
 	when
+		LeagueRoster( $leagueId : leagueId != null , $activeSlotNumber : slot != null , bench == false )
+		$activeTeamRoster : TeamRoster( leagueId == $leagueId , slotNumber == $activeSlotNumber , $activePlayerId : playerId != null )
 	then
 end
