@@ -1,6 +1,7 @@
 package com.vizuri.fantasy.domain;
 
 import java.lang.Number;
+import com.vizuri.fantasy.types.PlayerStatusType;
 
 rule "PlayerOutWarning"
 	dialect "mvel"
