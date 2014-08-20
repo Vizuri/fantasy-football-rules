@@ -12,11 +12,11 @@ rule "PlayerOutWarning"
 		PlayerStatus( playerId == $playerId , year == $year , week == $week , statusType == PlayerStatusType.INJURED_RESERVE || statusType == PlayerStatusType.OUT )
 	then
 		Violation fact0 = new Violation();
-		fact0.setDescription( "Active slot player is out or injured" );
+		fact0.setTitle( "Active slot player is out or injured" );
 		fact0.setLeagueId( $leagueId );
 		fact0.setSeverity( Severity.WARNING );
 		fact0.setSlotNumber( $slotNumber );
 		fact0.setTeamId( $teamRoster.teamId );
 		fact0.setWeek( $week );
-		insertLogical( fact0 );
+		insert( fact0 );
 end
