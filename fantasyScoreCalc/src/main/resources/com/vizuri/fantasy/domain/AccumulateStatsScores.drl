@@ -1,17 +1,20 @@
 package com.vizuri.fantasy.domain;
 
+import java.math.BigDecimal;
+
 rule "AccumulateWeeklyStatistic"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
-		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), $sum sum( $stat )
+		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), 
+					$sum : sum( $stat.getStatisticValue() ) )
 	then
 		PlayerWeeklyStatistic weeklyStat = new PlayerWeeklyStatistic();
 		weeklyStat.setWeek( $week );
 		weeklyStat.setYear( $year );
 		weeklyStat.setPlayerId( $playerId );
 		weeklyStat.setStatisticType( $statisticType );
-		weeklyStat.getStatisticValue( $sum );
+		weeklyStat.setStatisticValue( new BigDecimal($sum.toString()) );
 		insert( weeklyStat );
 end
 
