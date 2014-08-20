@@ -68,6 +68,39 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <fact-data>
+      <type>PlayStatistic</type>
+      <fieldData>
+        <field-data>
+          <name>playerId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticType</name>
+          <value>X</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>week</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>year</name>
+          <value>2012</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticValue</name>
+          <value>3</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$play3</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
