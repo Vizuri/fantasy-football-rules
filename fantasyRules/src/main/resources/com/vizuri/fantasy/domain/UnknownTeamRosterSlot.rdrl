@@ -11,10 +11,10 @@ rule "UnknownTeamRosterSlot"
 	then
 		Violation $violation = new Violation();
 		$violation.setSeverity( Severity.ERROR );
-		$violation.setDetails( "Invalid slot number" );
 		$violation.setSlotNumber( $slotNumber );
 		$violation.setLeagueId( $leagueId );
 		$violation.setTeamId( $teamRoster.teamId );
 		$violation.setWeek( $teamRoster.week );
+		$violation.setTitle( "Invalid slot number" );
 		insert( $violation );
 end
