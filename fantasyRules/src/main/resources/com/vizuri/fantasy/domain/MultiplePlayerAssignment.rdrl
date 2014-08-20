@@ -13,15 +13,15 @@ rule "MultiplePlayerAssignment"
 		fact0.setTeamId( $teamId );
 		fact0.setSlotNumber( $teamRoster.slotNumber );
 		fact0.setSeverity( Severity.ERROR );
-		fact0.setDescription( "Player on multiple teams" );
 		fact0.setWeek( $week );
+		fact0.setTitle( "Player on multiple teams on same league" );
 		insert( fact0 );
 		Violation fact1 = new Violation();
 		fact1.setLeagueId( $leagueId );
 		fact1.setTeamId( $teamRoster2.teamId );
 		fact1.setSlotNumber( $teamRoster2.slotNumber );
 		fact1.setSeverity( Severity.ERROR );
-		fact1.setDescription( "Player on multiple teams" );
 		fact1.setWeek( $week );
+		fact1.setTitle( "Player on multiple teams on same league" );
 		insert( fact1 );
 end
