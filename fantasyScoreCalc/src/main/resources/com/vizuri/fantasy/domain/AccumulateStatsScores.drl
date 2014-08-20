@@ -2,16 +2,6 @@ package com.vizuri.fantasy.domain;
 
 import java.math.BigDecimal;
 
-rule "ResetAccumulations"
-	salience 100
-	no-loop
-	when
-		$playerWeeklyStatistic : PlayerWeeklyStatistic( )
-	then
-		retract( $playerWeeklyStatistic )
-		System.err.println("Retracted weekly stat");
-end
-
 rule "AccumulateWeeklyStatistic"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
