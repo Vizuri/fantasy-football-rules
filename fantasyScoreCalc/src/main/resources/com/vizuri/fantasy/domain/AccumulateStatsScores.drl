@@ -30,7 +30,7 @@ rule "AccumulateWeeklyScore"
 		weeklyScore.setYear($year);
 		weeklyScore.setPlayerId($playerId);
 		weeklyScore.setRulesetId($rulesetId);
-		weeklyScore.setScore( new BigDecimal($sum.toString()));
+		weeklyScore.setCumulativeScore( new BigDecimal($sum.toString()));
 		insert(weeklyScore);
 		System.err.println("Created weekly score: " + weeklyScore.toString() );
 end
