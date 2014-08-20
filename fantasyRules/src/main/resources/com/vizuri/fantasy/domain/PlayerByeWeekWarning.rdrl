@@ -11,11 +11,11 @@ rule "PlayerByeWeekWarning"
 		ProTeam( nickname == $teamNickname , byeWeek == $week )
 	then
 		Violation fact0 = new Violation();
-		fact0.setDescription( "Player in non-bench slot that is on bye week" );
+		fact0.setTitle( "Player in non-bench slot that is on bye week" );
 		fact0.setLeagueId( $leagueId );
 		fact0.setSeverity( Severity.WARNING );
 		fact0.setSlotNumber( $slotNumber );
 		fact0.setTeamId( $teamRoster.teamId );
 		fact0.setWeek( $week );
-		insertLogical( fact0 );
+		insert( fact0 );
 end
