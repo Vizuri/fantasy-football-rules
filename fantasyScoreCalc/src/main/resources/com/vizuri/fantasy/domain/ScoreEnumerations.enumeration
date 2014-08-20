@@ -1,1 +1,2 @@
 'PlayerWeeklyStatistic.statisticType' : com.vizuri.fantasy.types.LookupHelper.getFootballStatisticTypes()
+'PlayStatistic.statisticType' : com.vizuri.fantasy.types.LookupHelper.getFootballStatisticTypes()
