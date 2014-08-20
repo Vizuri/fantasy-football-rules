@@ -1,9 +1,0 @@
-package com.vizuri.fantasy.domain;
-
-import java.lang.Number;
-
-rule "LongRunningPlay"
-	dialect "mvel"
-	when
-	then
-end
