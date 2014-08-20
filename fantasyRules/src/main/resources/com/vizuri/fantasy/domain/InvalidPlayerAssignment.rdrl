@@ -14,7 +14,7 @@ rule "InvalidPlayerAssignment"
 		fact0.setLeagueId( $leagueId );
 		fact0.setTeamId( $teamRoster.teamId );
 		fact0.setSlotNumber( $slotNumber );
-		fact0.setDescription( "Invalid player type in slot" );
 		fact0.setWeek( $teamRoster.week );
+		fact0.setTitle( "Invalid player type in slot" );
 		insert( fact0 );
 end
