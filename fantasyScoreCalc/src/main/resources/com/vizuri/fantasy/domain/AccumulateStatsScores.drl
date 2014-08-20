@@ -5,8 +5,8 @@ rule "AccumulateWeeklyStatistic"
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		$statTotal : Double( doubleValue > 0 )
 			from accumulate (
-				PlayStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType, $statValue : statisticValue.doubleValue() ),
-				sum( $statValue )
+				PlayStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType, $statValue : statisticValue is not null ),
+				sum( $statValue.doubleValue() )
 			)
 	then
 		System.err.println("Total is : " + $statTotal);
