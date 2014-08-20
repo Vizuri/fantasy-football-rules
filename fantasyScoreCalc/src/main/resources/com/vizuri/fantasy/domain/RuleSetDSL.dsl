@@ -1,3 +1,3 @@
-[condition]When there is a league using the default scoring system = $league:League(rulesetId is null)
-[condition]When there is a league using rule set id: {rulesetId} = $league:League(rulesetId == {rulesetId}
+[condition]When there the default scoring system is in use = $ruleSet:RuleSet(id is null)
+[condition]When the scoring system with id: {rulesetId} is active = $ruleSet:RuleSet(id == {rulesetId}
 
