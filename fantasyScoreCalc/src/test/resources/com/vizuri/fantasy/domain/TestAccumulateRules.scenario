@@ -13,8 +13,8 @@
         </field-data>
         <field-data>
           <name>statisticType</name>
-          <value>X</value>
-          <nature>1</nature>
+          <value>Rushing yards</value>
+          <nature>4</nature>
         </field-data>
         <field-data>
           <name>week</name>
@@ -28,7 +28,7 @@
         </field-data>
         <field-data>
           <name>statisticValue</name>
-          <value>1</value>
+          <value>27</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
@@ -45,8 +45,8 @@
         </field-data>
         <field-data>
           <name>statisticType</name>
-          <value>X</value>
-          <nature>1</nature>
+          <value>Receiving yards</value>
+          <nature>4</nature>
         </field-data>
         <field-data>
           <name>week</name>
@@ -78,8 +78,8 @@
         </field-data>
         <field-data>
           <name>statisticType</name>
-          <value>X</value>
-          <nature>1</nature>
+          <value>Passing yards</value>
+          <nature>4</nature>
         </field-data>
         <field-data>
           <name>week</name>
