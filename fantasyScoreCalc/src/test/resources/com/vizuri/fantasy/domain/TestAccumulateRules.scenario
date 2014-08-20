@@ -1,8 +1,74 @@
 <scenario>
-  <name>TestAccumulateRules</name>
+  <name>TestAccumulateRules.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
-  <fixtures/>
+  <fixtures>
+    <fact-data>
+      <type>PlayStatistic</type>
+      <fieldData>
+        <field-data>
+          <name>playerId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticType</name>
+          <value>X</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>week</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>year</name>
+          <value>2012</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticValue</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$play1</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>PlayStatistic</type>
+      <fieldData>
+        <field-data>
+          <name>playerId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticType</name>
+          <value>X</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>week</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>year</name>
+          <value>2012</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticValue</name>
+          <value>2</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$play2</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+  </fixtures>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.vizuri.fantasy.domain</packageName>
