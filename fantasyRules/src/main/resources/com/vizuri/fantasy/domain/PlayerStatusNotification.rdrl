@@ -12,11 +12,11 @@ rule "PlayerStatusNotification"
 		PlayerStatus( playerId == $playerId , year == $year , week == $week , statusType == PlayerStatusType.QUESTIONABLE || statusType == PlayerStatusType.DOUBTFUL )
 	then
 		Violation fact0 = new Violation();
-		fact0.setDescription( "Active slot player is Questionable or Doubtful" );
+		fact0.setTitle( "Active slot player is Questionable or Doubtful" );
 		fact0.setLeagueId( $leagueId );
 		fact0.setSeverity( Severity.INFO );
 		fact0.setSlotNumber( $slotNumber );
 		fact0.setTeamId( $teamRoster.teamId );
 		fact0.setWeek( $week );
-		insertLogical( fact0 );
+		insert( fact0 );
 end
