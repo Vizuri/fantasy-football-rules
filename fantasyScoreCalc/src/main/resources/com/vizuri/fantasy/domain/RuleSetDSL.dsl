@@ -1,0 +1,1 @@
+[condition]When there is a league using the default scoring system = $league:League(rulesetId is null)
