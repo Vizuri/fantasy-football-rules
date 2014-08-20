@@ -14,8 +14,8 @@ rule "MissingTeamSlot"
 		fact0.setLeagueId( $leagueId );
 		fact0.setTeamId( $teamId );
 		fact0.setSlotNumber( $slotNumber );
-		fact0.setDescription( "Team missing slot" );
 		fact0.setSeverity( Severity.ERROR );
 		fact0.setWeek( $currentWeek );
+		fact0.setTitle( "Team missing slot" );
 		insert( fact0 );
 end
