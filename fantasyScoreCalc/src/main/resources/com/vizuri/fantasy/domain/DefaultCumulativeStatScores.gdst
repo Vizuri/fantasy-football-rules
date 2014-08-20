@@ -9,7 +9,13 @@
     <hideColumn>false</hideColumn>
     <width>-1</width>
   </descriptionCol>
-  <metadataCols/>
+  <metadataCols>
+    <metadata-column52>
+      <hideColumn>true</hideColumn>
+      <width>-1</width>
+      <metadata></metadata>
+    </metadata-column52>
+  </metadataCols>
   <attributeCols/>
   <conditionPatterns>
     <Pattern52>
@@ -215,6 +221,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Passing yards</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -256,6 +267,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric>0.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_BIGDECIMAL</dataType>
         <isOtherwise>false</isOtherwise>
