@@ -3,11 +3,15 @@ package com.vizuri.fantasy.domain;
 rule "AccumulateWeeklyStatistic"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
-		$statTotal : Double( doubleValue > 0 )
-			from accumulate (
-				PlayStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType, $statValue : statisticValue != null ),
-				sum( $statValue.doubleValue() )
-			)
+		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
+		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), $sum sum( $stat )
 	then
-		System.err.println("Total is : " + $statTotal);
+		PlayerWeeklyStatistic weeklyStat = new PlayerWeeklyStatistic();
+		weeklyStat.setWeek( $week );
+		weeklyStat.setYear( $year );
+		weeklyStat.setPlayerId( $playerId );
+		weeklyStat.setStatisticType( $statisticType );
+		weeklyStat.getStatisticValue( $sum );
+		insert( weeklyStat );
 end
+
