@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 rule "ResetAccumulations"
 	salience 100
+	no-loop
 	when
 		$playerWeeklyStatistic : PlayerWeeklyStatistic( )
 	then
