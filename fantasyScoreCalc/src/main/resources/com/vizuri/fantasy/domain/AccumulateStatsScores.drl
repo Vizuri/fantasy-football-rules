@@ -1,2 +1,13 @@
 package com.vizuri.fantasy.domain;
 
+rule "AccumulateWeeklyStatistic"
+	when
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
+		$statTotal : Double( doubleValue > 0 )
+			from accumulate (
+				PlayStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType, $statValue : statisticValue.doubleValue() ),
+				sum( $statValue )
+			)
+	then
+		System.err.println("Total is : " + $statTotal);
+end
