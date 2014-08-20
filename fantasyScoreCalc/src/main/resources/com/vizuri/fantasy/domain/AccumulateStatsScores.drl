@@ -19,3 +19,20 @@ rule "AccumulateWeeklyStatistic"
 		System.err.println("Created weekly stat: " + weeklyStat.toString() );
 end
 
+rule "AccumulateWeeklyScore"
+	when
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
+		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
+		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
+	then
+		PlayerWeeklyScore weeklyScore = new PlayerWeeklyScore();
+		weeklyScore.setWeek($week);
+		weeklyScore.setYear($year);
+		weeklyScore.setPlayerId($playerId);
+		weeklyScore.setRulesetId($rulesetId);
+		weeklyScore.setScore( new BigDecimal($sum.toString()));
+		insert(weeklyScore);
+		System.err.println("Created weekly score: " + weeklyScore.toString() );
+end
+
+
