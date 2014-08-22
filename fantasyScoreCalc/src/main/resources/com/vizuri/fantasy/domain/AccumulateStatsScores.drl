@@ -22,7 +22,7 @@ rule "AddStatToWeeklyHolder"
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
 		$weeklyStat.addStatisticValue( $playStatistic.statisticValue );
-		System.err.println("Updated weekly stat: " + weeklyStat.toString() );
+		System.err.println("Updated weekly stat: " + $weeklyStat.toString() );
 end
 
 rule "AccumulateWeeklyScore"
