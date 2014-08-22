@@ -13,7 +13,7 @@
         </field-data>
         <field-data>
           <name>statisticType</name>
-          <value>Rushing yards</value>
+          <value>Passing TD</value>
           <nature>4</nature>
         </field-data>
         <field-data>
@@ -45,7 +45,7 @@
         </field-data>
         <field-data>
           <name>statisticType</name>
-          <value>Receiving yards</value>
+          <value>Passing TD</value>
           <nature>4</nature>
         </field-data>
         <field-data>
@@ -93,7 +93,7 @@
         </field-data>
         <field-data>
           <name>statisticValue</name>
-          <value>3</value>
+          <value>400</value>
           <nature>1</nature>
         </field-data>
       </fieldData>
