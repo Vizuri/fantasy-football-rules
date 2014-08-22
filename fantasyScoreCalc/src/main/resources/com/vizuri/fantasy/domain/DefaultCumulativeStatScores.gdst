@@ -12,7 +12,7 @@
   <metadataCols>
     <metadata-column52>
       <hideColumn>true</hideColumn>
-      <width>-1</width>
+      <width>100</width>
       <metadata></metadata>
     </metadata-column52>
   </metadataCols>
@@ -45,7 +45,7 @@
             <dataType>STRING</dataType>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
-          <hideColumn>true</hideColumn>
+          <hideColumn>false</hideColumn>
           <width>-1</width>
           <header>PlayerId</header>
           <constraintValueType>1</constraintValueType>
