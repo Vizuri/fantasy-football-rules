@@ -2,54 +2,57 @@ package com.vizuri.fantasy.domain;
 
 import java.math.BigDecimal;
 
-rule "CreateWeeklyStatisticHolder"
+rule "ResetWeeklyStatisticHolder"
 	dialect "mvel"
+	when
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType, isNew == true)
+		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
+	then
+		retract( $weeklyStat );
+		$playStatistic.isNew = false;
+		System.err.println("Created weekly stat: " + $playStatistic );
+end
+
+rule "AccumulateWeeklyStatistic"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
+		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), 
+					$sum : sum( $stat.getStatisticValue() ) )
 	then
 		PlayerWeeklyStatistic weeklyStat = new PlayerWeeklyStatistic();
 		weeklyStat.setWeek( $week );
 		weeklyStat.setYear( $year );
 		weeklyStat.setPlayerId( $playerId );
 		weeklyStat.setStatisticType( $statisticType );
+		weeklyStat.setStatisticValue( new BigDecimal($sum.toString()) );
 		insert( weeklyStat );
 		System.err.println("Created weekly stat: " + weeklyStat.toString() );
-end
-
-rule "AddStatToWeeklyHolder"
-	no-loop
-	when
-		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
-		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
-	then
-		$weeklyStat.setAddStatisticValue( $playStatistic.getStatisticValue() );
-		update( $weeklyStat );
-		System.err.println("Updated weekly stat: " + $weeklyStat.toString() );
 end
 
 rule "CreateWeeklyScoreHolder"
 	dialect "mvel"
 	when
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId, isNew == true )
+		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
+	then
+		retract( $weeklyScore );
+		$playScore.isNew = false;
+		System.err.println("Reset weekly score for : " + $playScore );
+end
+
+rule "AccumulateWeeklyScore"
+	when
 		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
+		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
 	then
 		PlayerWeeklyScore weeklyScore = new PlayerWeeklyScore();
 		weeklyScore.setWeek($week);
 		weeklyScore.setYear($year);
 		weeklyScore.setPlayerId($playerId);
 		weeklyScore.setRulesetId($rulesetId);
+		weeklyScore.setCumulativeScore( new BigDecimal($sum.toString()));
 		insert(weeklyScore);
 		System.err.println("Created weekly score: " + weeklyScore.toString() );
 end
-
-rule "AddScoreToWeeklyTotal"
-	when
-		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
-		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
-	then
-		$weeklyScore.addScore( $playScore.getScore());
-		System.err.println("Updated weekly score: " + $weeklyScore.toString() );
-end
-
-
