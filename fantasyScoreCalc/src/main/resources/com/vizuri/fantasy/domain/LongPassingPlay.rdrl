@@ -13,4 +13,5 @@ rule "LongPassingPlay" extends "DefaultScoringSystemActive"
 		fact0.setWeek( $playStat.week );
 		fact0.setYear( $playStat.year );
 		insert( fact0 );
+		System.err.println("Big play! Single play with " + $playStat.statisticValueString + " passing yards!");
 end
