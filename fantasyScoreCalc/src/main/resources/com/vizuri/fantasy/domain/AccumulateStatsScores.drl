@@ -23,15 +23,15 @@ rule "AddStatToWeeklyHolder"
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
 		$weeklyStat.setAddStatisticValue( $playStatistic.getStatisticValue() );
+		update( $weeklyStat );
 		System.err.println("Updated weekly stat: " + $weeklyStat.toString() );
 end
 
-rule "AccumulateWeeklyScore"
+rule "CreateWeeklyScoreHolder"
 	dialect "mvel"
 	when
 		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
-		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
 	then
 		PlayerWeeklyScore weeklyScore = new PlayerWeeklyScore();
 		weeklyScore.setWeek($week);
@@ -40,6 +40,15 @@ rule "AccumulateWeeklyScore"
 		weeklyScore.setRulesetId($rulesetId);
 		weeklyScore.setCumulativeScore( new BigDecimal($sum.toString()));
 		insert(weeklyScore);
+		System.err.println("Created weekly score: " + weeklyScore.toString() );
+end
+
+rule "AddScoreToWeeklyTotal"
+	when
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
+		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
+	then
+		$weeklyScore.addScore( $playScore.getScore());
 		System.err.println("Created weekly score: " + weeklyScore.toString() );
 end
 
