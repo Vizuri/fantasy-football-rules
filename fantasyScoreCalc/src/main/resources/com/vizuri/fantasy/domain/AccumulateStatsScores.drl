@@ -3,6 +3,7 @@ package com.vizuri.fantasy.domain;
 import java.math.BigDecimal;
 
 rule "CreateWeeklyStatisticHolder"
+	dialect "mvel"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
@@ -17,6 +18,7 @@ rule "CreateWeeklyStatisticHolder"
 end
 
 rule "AddStatToWeeklyHolder"
+	dialect "mvel"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
@@ -26,6 +28,7 @@ rule "AddStatToWeeklyHolder"
 end
 
 rule "AccumulateWeeklyScore"
+	dialect "mvel"
 	when
 		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
