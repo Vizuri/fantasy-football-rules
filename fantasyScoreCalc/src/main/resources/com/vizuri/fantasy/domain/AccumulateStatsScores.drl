@@ -21,8 +21,8 @@ rule "AddStatToWeeklyHolder"
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		$weeklyStat PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
-		$weeklyStat.
-		System.err.println("Created weekly stat: " + weeklyStat.toString() );
+		$weeklyStat.addStatisticValue( $playStatistic.statisticValue );
+		System.err.println("Updated weekly stat: " + weeklyStat.toString() );
 end
 
 rule "AccumulateWeeklyScore"
