@@ -2,7 +2,7 @@ package com.vizuri.fantasy.domain;
 
 import java.lang.Number;
 
-rule "LongPassingPlay" extends "DefaultScoringSystemActive"
+rule "LongPassingPlay"
 	dialect "mvel"
 	when
 		$playStat : PlayStatistic( statisticType == "Rushing yards" , statisticValue > 25B )
