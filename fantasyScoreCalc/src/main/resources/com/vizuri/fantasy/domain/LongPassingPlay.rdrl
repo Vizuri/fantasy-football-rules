@@ -9,7 +9,7 @@ rule "LongPassingPlay" extends "DefaultScoringSystemActive"
 	then
 		PlayScore fact0 = new PlayScore();
 		fact0.setPlayerId( $playStat.playerId );
-		fact0.setScore( 3 );
+		fact0.setScore( 3.0B );
 		fact0.setWeek( $playStat.week );
 		fact0.setYear( $playStat.year );
 		insert( fact0 );
