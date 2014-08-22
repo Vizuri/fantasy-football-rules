@@ -18,6 +18,7 @@ rule "CreateWeeklyStatisticHolder"
 end
 
 rule "AddStatToWeeklyHolder"
+	no-loop
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
