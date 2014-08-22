@@ -18,12 +18,11 @@ rule "CreateWeeklyStatisticHolder"
 end
 
 rule "AddStatToWeeklyHolder"
-	dialect "mvel"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
-		$weeklyStat.addStatisticValue( $playStatistic.statisticValue );
+		$weeklyStat.setAddStatisticValue( $playStatistic.getStatisticValue() );
 		System.err.println("Updated weekly stat: " + $weeklyStat.toString() );
 end
 
