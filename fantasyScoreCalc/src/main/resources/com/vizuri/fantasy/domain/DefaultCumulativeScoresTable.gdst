@@ -105,6 +105,7 @@
     </insert-fact-column52>
     <insert-fact-column52>
       <typedDefaultValue>
+        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
@@ -120,6 +121,7 @@
     </insert-fact-column52>
     <insert-fact-column52>
       <typedDefaultValue>
+        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
