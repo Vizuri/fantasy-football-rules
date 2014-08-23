@@ -45,7 +45,6 @@ rule "ResetWeeklyScoreHolder"
 	then
 		System.err.println("Retracted weekly score : " + $weeklyScore );
 		retract ( $weeklyScore );
-		modify ( $weeklyScore );
 		$playScore.isNew = false;
 		modify ( $playScore );
 end
