@@ -23,6 +23,7 @@ rule "AccumulateWeeklyStatistic"
 					$sum : sum( $stat.getStatisticValue() ) )
 	then
 		$playStatistic.setIsNew( false );
+		update( $playStatistic );
 		PlayerWeeklyStatistic weeklyStat = new PlayerWeeklyStatistic();
 		weeklyStat.setWeek( $week );
 		weeklyStat.setYear( $year );
