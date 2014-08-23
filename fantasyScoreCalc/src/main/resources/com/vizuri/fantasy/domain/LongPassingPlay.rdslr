@@ -2,7 +2,7 @@ package com.vizuri.fantasy.domain;
 
 import java.lang.Number;
 
-rule "LongPassingPlay"
+rule "LongPassingPlay" extends "DefaultScoringSystemActive"
 	dialect "mvel"
 	when
 		When there is a play statistic of type Passing yards for year 2013 with statistic value greater than 25
