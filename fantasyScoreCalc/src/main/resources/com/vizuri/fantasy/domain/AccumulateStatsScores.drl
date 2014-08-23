@@ -47,6 +47,19 @@ rule "RetractCumulativeScores"
 		update($playStatistic);
 end
 
+rule "ResetWeeklyScoreHolder2"
+	dialect "mvel"
+	salience 95
+	when
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, isNew == true)
+		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId )
+	then
+		retract ( $weeklyScore );
+		System.err.println("Retracted cumulative score due to new score fact: " + $playScore );
+		$playScore.isNew = false;
+		update($playScore);
+end
+
 rule "AccumulateWeeklyStatistic"
 	salience 90
 	when
