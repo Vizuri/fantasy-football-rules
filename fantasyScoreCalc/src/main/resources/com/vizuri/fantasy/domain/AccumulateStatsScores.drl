@@ -47,11 +47,12 @@ end
 
 rule "AccumulateWeeklyScore"
 	when
-		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId, isNew == false )
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
 		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
 	then
 		$playScore.setIsNew(false);
+		update ( $playScore );
 		PlayerWeeklyScore weeklyScore = new PlayerWeeklyScore();
 		weeklyScore.setWeek($week);
 		weeklyScore.setYear($year);
