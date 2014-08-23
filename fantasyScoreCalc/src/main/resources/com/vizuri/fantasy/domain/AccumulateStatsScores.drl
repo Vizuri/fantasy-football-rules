@@ -36,7 +36,7 @@ rule "AccumulateWeeklyStatistic"
 		System.err.println("Accumulated weekly stat: " + weeklyStat.toString() );
 end
 
-rule "CreateWeeklyScoreHolder"
+rule "ResetWeeklyScoreHolder"
 	dialect "mvel"
 	salience 100
 	when
@@ -44,8 +44,10 @@ rule "CreateWeeklyScoreHolder"
 		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
 	then
 		System.err.println("Retracted weekly score : " + $weeklyScore );
-		delete ( $weeklyScore );
+		retract ( $weeklyScore );
+		modify ( $weeklyScore );
 		$playScore.isNew = false;
+		modify ( $playScore );
 end
 
 rule "AccumulateWeeklyScore"
