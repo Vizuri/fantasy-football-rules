@@ -15,7 +15,7 @@ end
 
 rule "AccumulateWeeklyStatistic"
 	when
-		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType, isNew == false)
 		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), 
 					$sum : sum( $stat.getStatisticValue() ) )
@@ -43,7 +43,7 @@ end
 
 rule "AccumulateWeeklyScore"
 	when
-		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
+		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId, isNew == false )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
 		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
 	then
