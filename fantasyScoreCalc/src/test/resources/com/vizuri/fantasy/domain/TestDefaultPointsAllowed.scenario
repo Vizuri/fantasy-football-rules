@@ -4,12 +4,6 @@
   <globals/>
   <fixtures>
     <fact-data>
-      <type>RuleSet</type>
-      <fieldData/>
-      <name>$ruleSet</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
       <type>PlayStatistic</type>
       <fieldData>
         <field-data>
@@ -66,7 +60,7 @@
           <fieldName>year</fieldName>
           <expected>2013</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>PlayerWeeklyScore</name>
