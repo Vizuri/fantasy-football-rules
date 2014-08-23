@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "LongRunningPlay" extends "DefaultScoringSystemActive"
 	dialect "mvel"
 	when
-		When there is a play statistic of type Passing yards for year 2013 with statistic value greater than 25
+		When there is a play statistic of type Rushing yards for year 2013 with statistic value greater than 25
 	then
 		Create a new play score
 		Award 3.0 points
