@@ -5,12 +5,8 @@ import java.lang.Number;
 rule "LongRunningPlay" extends "DefaultScoringSystemActive"
 	dialect "mvel"
 	when
-		>$playStat : PlayStatistic( statisticType == "Rushing yards" , statisticValue > 25B )
+		When there is a play statistic
 	then
-		>PlayScore fact0 = new PlayScore();
-		>fact0.setPlayerId( $playStat.playerId );
-		>fact0.setScore( 5 );
-		>fact0.setWeek( $playStat.week );
-		>fact0.setYear( $playStat.year );
-		>insert( fact0 );
+		Create a new play score
+		Award 3.0 points
 end
