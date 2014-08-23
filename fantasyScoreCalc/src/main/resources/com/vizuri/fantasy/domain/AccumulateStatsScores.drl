@@ -8,12 +8,33 @@ rule "ResetWeeklyStatisticHolder"
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType, isNew == true)
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
-	then
+	then		
+		retract( $weeklyStat );
 		System.err.println("Retracting weekly stat: " + $weeklyStat );
-		$weeklyStat.year = -1;
-		update( $weeklyStat );
+end
+
+rule "ResetWeeklyScoreHolder"
+	dialect "mvel"
+	salience 100
+	when
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, isNew == true)
+		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId )
+	then
+		retract ( $weeklyScore );
+		System.err.println("Retracted weekly score: " + $weeklyScore );
+end
+
+rule "RetractCumulativeScores"
+	dialect "mvel"
+	salience 95
+	when
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, isNew == true)
+		$playScore : PlayScore( week == $week, year == $year, playerId == $playerId, isFromCumulative == true )
+	then
+		retract ( $playScore );
+		System.err.println("Retracted play score: " + $playScore );
 		$playStatistic.isNew = false;
-		update ($playStatistic );
+		update($playStatistic);
 end
 
 rule "AccumulateWeeklyStatistic"
@@ -34,19 +55,6 @@ rule "AccumulateWeeklyStatistic"
 		weeklyStat.setStatisticValue( new BigDecimal($sum.toString()) );
 		insert( weeklyStat );
 		System.err.println("Accumulated weekly stat: " + weeklyStat.toString() );
-end
-
-rule "ResetWeeklyScoreHolder"
-	dialect "mvel"
-	salience 100
-	when
-		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId, isNew == true )
-		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
-	then
-		System.err.println("Retracted weekly score : " + $weeklyScore );
-		retract ( $weeklyScore );
-		$playScore.isNew = false;
-		modify ( $playScore );
 end
 
 rule "AccumulateWeeklyScore"
