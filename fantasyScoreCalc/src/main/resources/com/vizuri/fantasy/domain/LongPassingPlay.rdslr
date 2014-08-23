@@ -2,8 +2,14 @@ package com.vizuri.fantasy.domain;
 
 import java.lang.Number;
 
-rule "LongPassingPlay"
+rule "LongPassingPlay" extends "DefaultScoringSystemActive"
 	dialect "mvel"
 	when
+		When there is a play statistic
+		And that statistic is of type Passing yards
+		And that statistic is for year 2013
+		And the statistic quantity is more than 25
 	then
+		Create a new play score
+		Award 3 points
 end
