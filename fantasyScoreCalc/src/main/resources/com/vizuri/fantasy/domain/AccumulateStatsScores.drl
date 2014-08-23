@@ -36,6 +36,7 @@ end
 
 rule "CreateWeeklyScoreHolder"
 	dialect "mvel"
+	salience 100
 	when
 		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId, isNew == true )
 		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
@@ -46,6 +47,7 @@ rule "CreateWeeklyScoreHolder"
 end
 
 rule "AccumulateWeeklyScore"
+	salience 90
 	when
 		$playScore : PlayScore( $week : week, $year : year, $playerId : playerId, $rulesetId : rulesetId )
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
