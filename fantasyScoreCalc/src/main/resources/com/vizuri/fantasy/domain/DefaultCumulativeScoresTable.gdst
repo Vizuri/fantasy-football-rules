@@ -1,5 +1,6 @@
 <decision-table52>
   <tableName>DefaultCumulativeScoresTable</tableName>
+  <parentName>DefaultScoringSystemActive</parentName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
     <width>-1</width>
