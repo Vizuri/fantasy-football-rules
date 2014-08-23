@@ -2,6 +2,16 @@ package com.vizuri.fantasy.domain;
 
 import java.math.BigDecimal;
 
+rule "ActivateDefaultRuleSet"
+	dialect "mvel"
+	salience 105
+	when
+		not RuleSet ( )
+	then
+		RuleSet $ruleSet = new RuleSet();
+		insert( $ruleSet );
+end
+
 rule "ResetWeeklyStatisticHolder"
 	dialect "mvel"
 	salience 100
