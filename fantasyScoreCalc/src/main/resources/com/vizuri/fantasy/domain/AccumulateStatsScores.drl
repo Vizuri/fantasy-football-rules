@@ -10,8 +10,10 @@ rule "ResetWeeklyStatisticHolder"
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
 		System.err.println("Retracting weekly stat: " + $weeklyStat );
-		delete ( $weeklyStat );
+		$weeklyStat.year = -1;
+		update( $weeklyStat );
 		$playStatistic.isNew = false;
+		update ($playStatistic );
 end
 
 rule "AccumulateWeeklyStatistic"
