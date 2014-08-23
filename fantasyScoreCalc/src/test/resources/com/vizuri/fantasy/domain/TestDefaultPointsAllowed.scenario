@@ -18,7 +18,7 @@
         </field-data>
         <field-data>
           <name>statisticValue</name>
-          <value></value>
+          <value>0.0</value>
           <nature>1</nature>
         </field-data>
         <field-data>
@@ -32,7 +32,7 @@
           <nature>1</nature>
         </field-data>
       </fieldData>
-      <name>$playStat1</name>
+      <name>$playStat</name>
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
@@ -60,7 +60,7 @@
           <fieldName>year</fieldName>
           <expected>2013</expected>
           <operator>==</operator>
-          <nature>1</nature>
+          <nature>0</nature>
         </expect-field>
       </fieldValues>
       <name>PlayerWeeklyScore</name>
