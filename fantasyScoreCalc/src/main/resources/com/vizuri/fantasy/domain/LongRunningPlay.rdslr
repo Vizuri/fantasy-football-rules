@@ -5,7 +5,6 @@ import java.lang.Number;
 rule "LongRunningPlay" extends "DefaultScoringSystemActive"
 	dialect "mvel"
 	when
-		When there is a play statistic
 	then
 		Create a new play score
 		Award 3.0 points
