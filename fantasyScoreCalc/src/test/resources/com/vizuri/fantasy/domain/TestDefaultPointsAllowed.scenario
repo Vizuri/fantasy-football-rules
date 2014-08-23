@@ -155,6 +155,69 @@
           <fieldName>year</fieldName>
           <expected>2013</expected>
           <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>PlayerWeeklyScore</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
+    <fact-data>
+      <type>PlayStatistic</type>
+      <fieldData>
+        <field-data>
+          <name>playerId</name>
+          <value>1</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>statisticType</name>
+          <value>Points allowed</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>statisticValue</name>
+          <value>7.0</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>week</name>
+          <value>2</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>year</name>
+          <value>2013</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>$playStat4</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>cumulativeScore</fieldName>
+          <expected>4.0</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>playerId</fieldName>
+          <expected>1</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>week</fieldName>
+          <expected>2</expected>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>year</fieldName>
+          <expected>2013</expected>
+          <operator>==</operator>
           <nature>0</nature>
         </expect-field>
       </fieldValues>
