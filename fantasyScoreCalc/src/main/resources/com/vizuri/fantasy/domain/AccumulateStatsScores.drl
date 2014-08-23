@@ -10,7 +10,7 @@ rule "ResetWeeklyStatisticHolder"
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then
 		System.err.println("Retracting weekly stat: " + $weeklyStat );
-		retract( $weeklyStat );
+		delete ( $weeklyStat );
 		$playStatistic.isNew = false;
 end
 
@@ -42,7 +42,7 @@ rule "CreateWeeklyScoreHolder"
 		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
 	then
 		System.err.println("Retracted weekly score : " + $weeklyScore );
-		retract( $weeklyScore );
+		delete ( $weeklyScore );
 		$playScore.isNew = false;
 end
 
