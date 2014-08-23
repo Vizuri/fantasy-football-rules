@@ -159,9 +159,9 @@
         </expect-field>
         <expect-field>
           <fieldName>cumulativeScore</fieldName>
-          <expected>25.08</expected>
+          <expected>34.08</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>PlayerWeeklyScore</name>
