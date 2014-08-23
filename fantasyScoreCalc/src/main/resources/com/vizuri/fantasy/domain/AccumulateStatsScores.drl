@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 rule "ResetWeeklyStatisticHolder"
 	dialect "mvel"
+	salience 100
 	when
 		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType, isNew == true)
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
@@ -14,8 +15,9 @@ rule "ResetWeeklyStatisticHolder"
 end
 
 rule "AccumulateWeeklyStatistic"
+	salience 90
 	when
-		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType, isNew == false)
+		$playStatistic : PlayStatistic( $week : week, $year : year, $playerId : playerId, $statisticType : statisticType)
 		not PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 		accumulate ( $stat : PlayStatistic( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType ), 
 					$sum : sum( $stat.getStatisticValue() ) )
@@ -47,6 +49,7 @@ rule "AccumulateWeeklyScore"
 		not PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId )
 		accumulate ( $score : PlayScore( week == $week, year == $year, playerId == $playerId, rulesetId == $rulesetId), $sum : sum ( $score.getScore() ))
 	then
+		$playScore.setIsNew(false);
 		PlayerWeeklyScore weeklyScore = new PlayerWeeklyScore();
 		weeklyScore.setWeek($week);
 		weeklyScore.setYear($year);
