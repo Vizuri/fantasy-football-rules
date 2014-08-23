@@ -1,0 +1,12 @@
+<scenario>
+  <name>TestDefaultPointsAllowed</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures/>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>com.vizuri.fantasy.domain</packageName>
+  <imports>
+    <imports/>
+  </imports>
+</scenario>
