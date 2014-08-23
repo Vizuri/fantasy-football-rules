@@ -9,4 +9,5 @@ rule "LongPassingPlay" extends "DefaultScoringSystemActive"
 	then
 		Create a new play score
 		Award 3.0 points
+		>System.err.println("Big play alert!  Passing yards of " + $playStat.statisticValue + " yards in a single play!");
 end
