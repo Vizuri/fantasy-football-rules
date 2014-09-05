@@ -3,9 +3,9 @@ package com.vizuri.fantasy.domain;
 import java.util.Date;
 
 query getUpdatedWeeklyStats ( Date since )
-	PlayerWeeklyStatistic ( timeStamp > since )
+	$playerWeeklyStat : PlayerWeeklyStatistic ( timeStamp > since )
 end
 
 query getUpdatedWeeklyScores ( Date since )
-	PlayerWeeklyScore (timeStamp > since )
+	$playerWeeklyScore : PlayerWeeklyScore (timeStamp > since )
 end
