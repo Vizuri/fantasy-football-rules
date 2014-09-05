@@ -20,7 +20,6 @@ rule "ResetWeeklyStatisticHolder"
 		$weeklyStat : PlayerWeeklyStatistic ( week == $week, year == $year, playerId == $playerId, statisticType == $statisticType )
 	then		
 		retract( $weeklyStat );
-		System.err.println("Retracting weekly stat: " + $weeklyStat );
 end
 
 rule "ResetWeeklyScoreHolder"
@@ -31,7 +30,6 @@ rule "ResetWeeklyScoreHolder"
 		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId )
 	then
 		retract ( $weeklyScore );
-		System.err.println("Retracted weekly score: " + $weeklyScore );
 end
 
 rule "RetractCumulativeScores"
@@ -55,7 +53,6 @@ rule "ResetWeeklyScoreHolder2"
 		$weeklyScore : PlayerWeeklyScore( week == $week, year == $year, playerId == $playerId )
 	then
 		retract ( $weeklyScore );
-		System.err.println("Retracted cumulative score due to new score fact: " + $playScore );
 		$playScore.isNew = false;
 		update($playScore);
 end
@@ -77,7 +74,6 @@ rule "AccumulateWeeklyStatistic"
 		weeklyStat.setStatisticType( $statisticType );
 		weeklyStat.setStatisticValue( new BigDecimal($sum.toString()) );
 		insert( weeklyStat );
-		System.err.println("Accumulated weekly stat: " + weeklyStat.toString() );
 end
 
 rule "AccumulateWeeklyScore"
@@ -96,5 +92,4 @@ rule "AccumulateWeeklyScore"
 		weeklyScore.setRulesetId($rulesetId);
 		weeklyScore.setCumulativeScore( new BigDecimal($sum.toString()));
 		insert(weeklyScore);
-		System.err.println("Accumulated weekly score: " + weeklyScore.toString() );
 end
