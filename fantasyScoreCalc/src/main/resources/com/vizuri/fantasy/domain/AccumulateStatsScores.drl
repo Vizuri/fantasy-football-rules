@@ -40,7 +40,6 @@ rule "RetractCumulativeScores"
 		$playScore : PlayScore( week == $week, year == $year, playerId == $playerId, isFromCumulative == true )
 	then
 		retract ( $playScore );
-		System.err.println("Retracted play score: " + $playScore );
 		$playStatistic.isNew = false;
 		update($playStatistic);
 end
